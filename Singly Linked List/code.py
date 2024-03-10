@@ -26,7 +26,7 @@ class Singly_list:
         self.start = n
     
     def insert_at_last(self, data):
-        n = Node(data, None)
+        n = Node(data)
         if not self.is_empty():
             temp = self.start
             while temp.next is not None:
@@ -35,7 +35,20 @@ class Singly_list:
         else:
             self.start = n
 
+    def search(self, data):
+        if not self.is_empty():
+            temp = self.start
+            while temp is not None:
+                if temp.item == data:
+                    return f"Item found at {temp.item} and you searched for {data}"
+                else:
+                    temp = temp.next
+        else:
+            return f"list is empty"
+
+
 # driver code
 mylist = Singly_list()
 
 print(mylist.is_empty())
+print(mylist.search(1))

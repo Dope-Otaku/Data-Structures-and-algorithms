@@ -77,13 +77,14 @@ class Sll:
     
         
     def insert_at_first(self, data):
-        try: 
+        if  self.isEmpty():
             node = Node(data, self.start)
             self.start = node  # Update the start of the list to the new node
             print("node added at first")
-        except:
-            return f"failed to add a node at first"
+        else:
+            return 0
         
+            
     def insert_at_last(self, data):
         node = Node(data)
         if not self.isEmpty():
@@ -95,37 +96,71 @@ class Sll:
             self.start = node 
 
     def search(self, value):
-        if not self.isEmpty():
+        if self.isEmpty() is not None:
             temp = self.start
             while temp is not None:
                 if temp.item == value:
-                    f"found at {temp}"
+                    return f"found this {value} at {temp}"  # Return the found item
                 else:
                     temp = temp.next
+            return f"Item {value} not found in the list"  # Return a message if item is not found
         else:
-            return f"list is empty"
+            return f"list is empty"  # Return a message if the list is empty
 
-    def insertBefore(self, newdata, olddata):
-        if not self.isEmpty():
+    # def insertBefore(self, newdata, olddata):
+    #     if not self.isEmpty():
+    #         temp = self.start
+    #         prev = None
+    #         NewNode = Node(newdata)
+    #         while temp is not None:
+    #             if temp.item == olddata:
+    #                 if prev is None:
+    #                     NewNode.next = temp
+    #                     self.start = NewNode
+    #                 else:
+    #                     prev.next = NewNode
+    #                     NewNode.next = temp
+    #                 return f"Inserted {newdata} before {olddata}"
+    #             prev = temp
+    #             temp = temp.next
+    #         return f"Item {olddata} not found in the list"
+    #     else:
+    #         return f"List is empty"
+    def InsertBefore(self, Ev, Nv):
+        if  self.isEmpty() != None:
             temp = self.start
-            prev = None
-            NewNode = Node(newdata)
+            node = Node(Nv)
             while temp is not None:
-                if temp.item == olddata:
-                    if prev is None:
-                        NewNode.next = temp
-                        self.start = NewNode
+                if temp.item == Ev:
+                    node.next = temp
+                    if temp == self.start:
+                        self.start = node
                     else:
-                        prev.next = NewNode
-                        NewNode.next = temp
-                    return f"Inserted {newdata} before {olddata}"
+                        prev.next = node
+                    print("success")
+                    return
                 prev = temp
                 temp = temp.next
-            return f"Item {olddata} not found in the list"
+            else:
+                return f"failed"
         else:
-            return f"List is empty"
+            return f'list is empty'
 
-        
+    def Delete(self, value):
+        if self.isEmpty() != None:
+            temp = self.start
+            prev = None
+            while temp is not None:
+                if temp.item == value:
+                    if prev is not None:
+                        prev.next = temp.next
+                    else:
+                        self.start = temp.next
+                    temp.next = None
+                    return f"Node deleted with item {value}"
+                prev = temp
+                temp = temp.next
+
 
         
     
@@ -133,6 +168,11 @@ class Sll:
 ll =  Sll()
 print(ll.insert_at_first(2))
 print(ll.isEmpty())
-print(ll.insert_at_last(7))
+# print(ll.insert_at_last(7))
+print(ll.InsertBefore(2, 9))
+print(ll.InsertBefore(9, 1))
 print(ll.search(2))
-print(ll.insertBefore(9, 2))
+print(ll.search(9))
+print(ll.search(1))
+print(ll.Delete(2))
+print(ll.search(2))

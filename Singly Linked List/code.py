@@ -58,7 +58,7 @@
 
 
 
-
+# ----------------------------------------------Practise-----------------------------------------------------------------
 class Node:
     def __init__(self, item=None, next=None):
         self.item = item
@@ -73,9 +73,6 @@ class Sll:
             return f"The singly linked list is empty"
         else:
             return f"the sll is not empty"
-        
-    
-        
     def insert_at_first(self, data):
         if  self.isEmpty():
             node = Node(data, self.start)
@@ -83,8 +80,6 @@ class Sll:
             print("node added at first")
         else:
             return 0
-        
-            
     def insert_at_last(self, data):
         node = Node(data)
         if not self.isEmpty():
@@ -94,7 +89,6 @@ class Sll:
             temp.next = node
         else:
             self.start = node 
-
     def search(self, value):
         if self.isEmpty() is not None:
             temp = self.start
@@ -106,26 +100,6 @@ class Sll:
             return f"Item {value} not found in the list"  # Return a message if item is not found
         else:
             return f"list is empty"  # Return a message if the list is empty
-
-    # def insertBefore(self, newdata, olddata):
-    #     if not self.isEmpty():
-    #         temp = self.start
-    #         prev = None
-    #         NewNode = Node(newdata)
-    #         while temp is not None:
-    #             if temp.item == olddata:
-    #                 if prev is None:
-    #                     NewNode.next = temp
-    #                     self.start = NewNode
-    #                 else:
-    #                     prev.next = NewNode
-    #                     NewNode.next = temp
-    #                 return f"Inserted {newdata} before {olddata}"
-    #             prev = temp
-    #             temp = temp.next
-    #         return f"Item {olddata} not found in the list"
-    #     else:
-    #         return f"List is empty"
     def InsertBefore(self, Ev, Nv):
         if  self.isEmpty() != None:
             temp = self.start
@@ -145,7 +119,6 @@ class Sll:
                 return f"failed"
         else:
             return f'list is empty'
-
     def Delete(self, value):
         if self.isEmpty() != None:
             temp = self.start
@@ -160,7 +133,11 @@ class Sll:
                     return f"Node deleted with item {value}"
                 prev = temp
                 temp = temp.next
-
+    def print_list(self):
+        temp = self.start
+        while temp != None:
+            print(temp.item, end=' ')
+            temp = temp.next
 
         
     
@@ -168,7 +145,7 @@ class Sll:
 ll =  Sll()
 print(ll.insert_at_first(2))
 print(ll.isEmpty())
-# print(ll.insert_at_last(7))
+# print(ll.insert_at_last(7))  //error in this function fix it
 print(ll.InsertBefore(2, 9))
 print(ll.InsertBefore(9, 1))
 print(ll.search(2))
@@ -176,3 +153,5 @@ print(ll.search(9))
 print(ll.search(1))
 print(ll.Delete(2))
 print(ll.search(2))
+# print()
+ll.print_list()

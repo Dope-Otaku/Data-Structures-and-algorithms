@@ -139,19 +139,45 @@ class Sll:
             print(temp.item, end=' ')
             temp = temp.next
 
-        
+    def findMid(self):
+        temp = self.start
+        temp2 = self.start
+
+        while temp2 is not None and temp2.next is not None:
+            temp = temp.next
+            temp2 = temp2.next.next
+        return temp.item
+    def sortList(self):
+        p1 = self.start
+        p2 = self.start
+        while p1 and p2 is not None:
+            if p2.item <= p1.item:
+                p1 = p1.next
+            elif p2.item > p1.item:
+                p2 = p1.next
+                p1.next = p2
+        p1 = p1.next
+        print(self.print_list())
+
     
 
 ll =  Sll()
 print(ll.insert_at_first(2))
-print(ll.isEmpty())
+# print(ll.isEmpty())
 # print(ll.insert_at_last(7))  //error in this function fix it
-print(ll.InsertBefore(2, 9))
-print(ll.InsertBefore(9, 1))
-print(ll.search(2))
-print(ll.search(9))
-print(ll.search(1))
-print(ll.Delete(2))
-print(ll.search(2))
+print(ll.InsertBefore(2, 3))
+print(ll.InsertBefore(3, 4))
+print(ll.InsertBefore(4, 5))
+print(ll.InsertBefore(5, 6))
+print(ll.InsertBefore(6, 7))
+print(ll.InsertBefore(7, 8))
+print(ll.InsertBefore(8, 9))
+# print(ll.search(2))
+# print(ll.search(9))
+# print(ll.search(1))
+# print(ll.Delete(2))
+# print(ll.search(2))
 # print()
 ll.print_list()
+print("\n", ll.findMid())
+print(ll.sortList())

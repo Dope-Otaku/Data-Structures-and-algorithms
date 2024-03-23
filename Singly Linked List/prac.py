@@ -148,16 +148,7 @@ class Sll:
             temp2 = temp2.next.next
         return temp.item
     def sortList(self):
-        p1 = self.start
-        p2 = self.start
-        while p1 and p2 is not None:
-            if p2.item <= p1.item:
-                p1 = p1.next
-            elif p2.item > p1.item:
-                p2 = p1.next
-                p1.next = p2
-        p1 = p1.next
-        print(self.print_list())
+        return f"you can not sort a linked list"
 
     
 

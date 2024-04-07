@@ -19,7 +19,7 @@ class dll:
     def insertAtFirst(self, item):
         node = Node(None, None, item)
         temp = self.start
-        p
+        
         if self.is_empty():
             self.start = node
             print(f"added the item: {item} in node stored at {node} at first as node was empty!")

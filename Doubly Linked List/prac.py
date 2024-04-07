@@ -17,21 +17,17 @@ class dll:
             return f"List is not Empty!"
         
     def insertAtFirst(self, item):
-        node = Node(None, None, item)
-        temp = self.start
-        
-        if self.is_empty():
-            self.start = node
-            print(f"added the item: {item} in node stored at {node} at first as node was empty!")
-        else:
-            while temp is not None:
-                tempNode = temp.next
-                tempNode.prev = node
-                print(f"added the item: {item} in node stored at {node} but this is betweeen an earlier node!")
-            
+        node = Node(None, self.start, item)
+
+        if not self.is_empty():
+            self.start.prev = node
+            print(f"the list was not empty and hence added")
+        self.start = node
+        print(f"list was empty and hence added the node {node}")           
     
 
 n = dll()
 print(n)
 print(n.insertAtFirst(1))
 print(n.is_empty())
+print(n.insertAtFirst(2))

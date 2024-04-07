@@ -16,8 +16,8 @@ class dll:
         else:
             return f"List is not Empty!"
         
-    def insertAtFirst(self, item):
-        node = Node(None, self.start, item)
+    def insertAtFirst(self, data):
+        node = Node(None, self.start, data)
 
         if not self.is_empty():
             self.start.prev = node
@@ -25,9 +25,23 @@ class dll:
         self.start = node
         print(f"list was empty and hence added the node {node}")           
     
+    def insertAtLast(self, data):
+        node = Node(item = data)
+        if self.start == None:
+            self.start = node
+            print(f"no earlier list found, ading at {self.start}")
+            return 
+        temp = self.start
+        while temp.next is not None:
+            temp = temp.next
+        temp.next = node
+        node.prev = temp
+        print(f"added at last using traversal")              
 
 n = dll()
 print(n)
-print(n.insertAtFirst(1))
+# print(n.insertAtFirst(1))
 print(n.is_empty())
-print(n.insertAtFirst(2))
+# print(n.insertAtFirst(2))
+print(n.insertAtLast(3))
+print(n.is_empty())

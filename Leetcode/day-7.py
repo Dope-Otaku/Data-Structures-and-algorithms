@@ -1,11 +1,18 @@
 #product of array except self
 
-nums = [1,2,3,4]
-answer = []
+#approach = we will first traverse from left to right and then right to left with one space leaving for each at start
 
-start = 0
-end = len(nums)-1
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        ans = [1] * n
 
-for i in range(len(nums)):
-        if i == start and start < end:
-                
+        for i in range(1, n):
+            ans[i] = ans[i-1] * nums[i-1]
+
+        rp = 1 #rp = rightproduct
+
+        for i in range(n-1, -1, -1):
+            ans[i] = ans[i] * rp
+            rp = rp * nums[i]
+        return ans  

@@ -40,8 +40,8 @@ class dll:
 
 n = dll()
 print(n)
-# print(n.insertAtFirst(1))
+print(n.insertAtFirst(1))
 print(n.is_empty())
-# print(n.insertAtFirst(2))
+print(n.insertAtFirst(2))
 print(n.insertAtLast(3))
 print(n.is_empty())

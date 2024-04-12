@@ -61,6 +61,16 @@ class dll:
             print(f"{temp.item}", end=" ")
             temp = temp.next
 
+    def del_first(self):
+        temp = self.start
+        while temp is not None:
+            if temp.next is None:
+                self.start.next = None
+            temp = temp.next.next
+            self.start.next.prev = None
+            print("deleted")
+            temp = temp.next
+            
 
 n = dll()
 print(n)
@@ -71,4 +81,6 @@ print(n.insertAtLast(3))
 print(n.is_empty())
 print(n.search(3))
 # print(n.insertAfter(3,4))
+print(n.printl())
+print(n.del_first())
 print(n.printl())

@@ -55,7 +55,11 @@ class dll:
                 # n.prev = temp as already assigned!
             temp.next = n
 
-
+    def printl(self):
+        temp = self.start
+        while temp is not None:
+            print(f"{temp.item}", end=" ")
+            temp = temp.next
 
 
 n = dll()
@@ -66,4 +70,5 @@ print(n.insertAtFirst(2))
 print(n.insertAtLast(3))
 print(n.is_empty())
 print(n.search(3))
-print(n.insertAfter(3,4))
+# print(n.insertAfter(3,4))
+print(n.printl())

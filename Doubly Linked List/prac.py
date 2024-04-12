@@ -47,6 +47,14 @@ class dll:
                 temp = temp.next
             return None
         
+    def insertAfter(self, temp, data):
+        if temp is not None:
+            n = Node(temp, temp.next, data)
+            if temp.next is not None:
+                temp.next.prev = n
+                # n.prev = temp as already assigned!
+            temp.next = n
+
 
 
 
@@ -57,5 +65,5 @@ print(n.is_empty())
 print(n.insertAtFirst(2))
 print(n.insertAtLast(3))
 print(n.is_empty())
-
 print(n.search(3))
+print(n.insertAfter(3,4))

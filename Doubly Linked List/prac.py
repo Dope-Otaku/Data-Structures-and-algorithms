@@ -76,7 +76,21 @@ class dll:
         self.start = second_node
         print("Deleted the first node.")
 
-            
+    def __iter__(self):
+        return DLLIterator(self.start)
+
+class DLLIterator:
+    def __init__(self, start):
+        self.current = start
+
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if not self.current:
+            raise StopIteration
+        data = self.current.item
+        self.current = self.current.next
+        return data
 
 n = dll()
 print(n)
@@ -90,3 +104,6 @@ print(n.search(3))
 print(n.printl())
 print(n.del_first())
 print(n.printl())
+
+for x in n:
+    print(x)

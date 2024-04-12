@@ -3,7 +3,7 @@
 #approach = we will first traverse from left to right and then right to left with one space leaving for each at start
 
 class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
+    def productExceptSelf(self, nums):
         n = len(nums)
         ans = [1] * n
 

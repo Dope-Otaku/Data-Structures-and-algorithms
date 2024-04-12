@@ -62,14 +62,20 @@ class dll:
             temp = temp.next
 
     def del_first(self):
-        temp = self.start
-        while temp is not None:
-            if temp.next is None:
-                self.start.next = None
-            temp = temp.next.next
-            self.start.next.prev = None
-            print("deleted")
-            temp = temp.next
+        if self.start is None:
+            print("List is empty. Nothing to delete.")
+            return
+
+        if self.start.next is None:
+            self.start = None
+            print("Deleted the only node in the list.")
+            return
+
+        second_node = self.start.next
+        second_node.prev = None
+        self.start = second_node
+        print("Deleted the first node.")
+
             
 
 n = dll()

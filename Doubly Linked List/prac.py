@@ -38,6 +38,18 @@ class dll:
         node.prev = temp
         print(f"added at last using traversal")              
 
+    def search(self, data):
+            temp = self.start
+            while temp is not None:
+                if temp.item == data:
+                    print(f"found at: {temp.item} and you searched for {data}")
+                    return  temp
+                temp = temp.next
+            return None
+        
+
+
+
 n = dll()
 print(n)
 print(n.insertAtFirst(1))
@@ -45,3 +57,5 @@ print(n.is_empty())
 print(n.insertAtFirst(2))
 print(n.insertAtLast(3))
 print(n.is_empty())
+
+print(n.search(3))

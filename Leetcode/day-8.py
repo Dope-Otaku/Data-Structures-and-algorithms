@@ -15,7 +15,7 @@
 #my own logic after watching explanation
 class Solution:
     def increasingTriplet(self, nums: List[int]) -> bool:
-        num1, num2 = inf, inf
+        num1, num2 = inf, inf #inf means infinty
         for num3 in nums:
             if num3<= num1:
                 num1 = num3

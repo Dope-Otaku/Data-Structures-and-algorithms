@@ -5,11 +5,11 @@ class Node:
         self.item = item
         self.next = next
 class CLL:
-    def __init__(self, start=None):
-        self.start = start
+    def __init__(self, last=None):
+        self.last = last
 
     def isEmpty(self):
-        if self.start == None:
+        if self.last == None:
             return True
         return False
     
@@ -19,17 +19,15 @@ class CLL:
     def insertatFirst(self, data):
         #node created at first
         node = Node(data)
-        #if list is not empty 
-        if not self.isEmpty():
-            temp = self.start
-            temp.next = node
-            node = temp.next.next
-            print("a")
-
-            
-        #if list is empty
-        self.start = node
-        return f"added succesfully"
+        #if list is empty 
+        if self.isEmpty():
+            node.next = node
+            self.last = node
+            print(f"list was empty so added at first directky at {node}")
+        else:
+            node.next = self.last.next
+            self.last.next = node
+            print(f"list was not empty so added  at {node}")
 
 
 

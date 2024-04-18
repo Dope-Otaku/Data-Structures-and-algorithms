@@ -12,17 +12,30 @@ class CLL:
         if self.start == None:
             return True
         return False
+    
+    def listPrint(self):
+        pass
 
     def insertatFirst(self, data):
-        if self.isEmpty():
-            node = Node(data, self.start)
-            self.start = node
-            return f"added succesfully"
-        return f"failed to add"
+        #node created at first
+        node = Node(data)
+        #if list is not empty 
+        if not self.isEmpty():
+            temp = self.start
+            temp.next = node
+            node = temp.next.next
+            print("a")
+
+            
+        #if list is empty
+        self.start = node
+        return f"added succesfully"
+
 
 
 new = CLL()
 
 print(new)
 print(new.insertatFirst(9))
+print(new.insertatFirst(10))
 print(new.isEmpty())

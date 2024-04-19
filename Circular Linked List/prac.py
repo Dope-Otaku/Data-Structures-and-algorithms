@@ -16,24 +16,42 @@ class CLL:
     def listPrint(self):
         pass
 
-    def insertatFirst(self, data):
+    def insertatFirst(self, data): #no traversing
         #node created at first
         node = Node(data)
         #if list is empty 
         if self.isEmpty():
-            node.next = node
-            self.last = node
-            print(f"list was empty so added at first directky at {node}")
+            node.next = node #make a pointer to itself
+            self.last = node #make a poibter to self.last
+            print(f"list was empty so added at first directly at {node}")
         else:
-            node.next = self.last.next
+            #if list is not empty
+            node.next = self.last.next 
             self.last.next = node
             print(f"list was not empty so added  at {node}")
 
-
-
+    def insertAtlast(self, data): #no traversing
+        #node created
+        node = Node(data)
+        # if list is empty
+        if self.isEmpty():
+            node.next = node
+            self.last = node
+            print(f"list was empty so added at last directly at {node}")
+        #if it is not empty
+        else:
+            #first add a pointer of first node to new node from the last node
+            last = self.last.next
+            node.next = last
+            #now our new node has a connection with first node now we want it to be connected with last node
+            last = node
+            #now we will move the start pointer(last) to the new node
+            self.last = node
+            print(f"list was not empty so added  at {node}")
 new = CLL()
 
 print(new)
 print(new.insertatFirst(9))
 print(new.insertatFirst(10))
+print(new.insertAtlast(11))
 print(new.isEmpty())

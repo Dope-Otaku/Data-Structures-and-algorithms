@@ -58,6 +58,27 @@ class CLL:
                 return f"item:{data} found at {temp}"
             temp = temp.next
             break
+    
+    def printlist(self):
+        if self.isEmpty():
+            print("List is empty.")
+            return
+        
+        temp = self.last.next
+        print(temp.item)
+        
+        while temp.next is not self.last:
+            temp = temp.next
+            print(temp.item)
+        
+        # Print the last item
+        print(self.last.item)
+
+        
+
+
+    def insertAfter(self, temp, data):
+        pass
             
 new = CLL()
 
@@ -67,3 +88,4 @@ print(new.insertatFirst(10))
 print(new.insertAtlast(11))
 print(new.search(11))
 print(new.isEmpty())
+print(new.printlist())

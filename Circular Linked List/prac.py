@@ -48,10 +48,22 @@ class CLL:
             #now we will move the start pointer(last) to the new node
             self.last = node
             print(f"list was not empty so added  at {node}")
+
+    def search(self, data): #caution runs infinitely so make sure to stop it soon after it is done
+        temp = self.last
+        while temp.next is not None:
+            if self.isEmpty():
+                return f"the list is empty"
+            if(data==temp.item):
+                return f"item:{data} found at {temp}"
+            temp = temp.next
+            break
+            
 new = CLL()
 
 print(new)
 print(new.insertatFirst(9))
 print(new.insertatFirst(10))
 print(new.insertAtlast(11))
+print(new.search(11))
 print(new.isEmpty())

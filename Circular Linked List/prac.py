@@ -41,10 +41,9 @@ class CLL:
         #if it is not empty
         else:
             #first add a pointer of first node to new node from the last node
-            last = self.last.next
-            node.next = last
+            node.next = self.last.next
             #now our new node has a connection with first node now we want it to be connected with last node
-            last = node
+            self.last.next = node
             #now we will move the start pointer(last) to the new node
             self.last = node
             print(f"list was not empty so added  at {node}")
@@ -60,31 +59,36 @@ class CLL:
             break
     
     def printlist(self):
-        if self.isEmpty():
-            print("List is empty.")
-            return
-        
-        temp = self.last.next
-        print(temp.item)
-        
-        while temp.next is not self.last:
-            temp = temp.next
+        if not self.isEmpty():
+            # return f"List is empty."
+            temp = self.last.next
+            # print(temp.item)
+            
+            while temp is not self.last:
+                print(temp.item, end=" ")
+                temp = temp.next
+            
+            # Print the last item
             print(temp.item)
+            
         
-        # Print the last item
-        print(self.last.item)
 
         
 
 
     def insertAfter(self, temp, data):
-        pass
+        if temp is not None:
+            node = Node(data, temp.next)
+            temp.next = node
+            if temp == self.last:
+                self.last=node
             
 new = CLL()
 
 print(new)
 print(new.insertatFirst(9))
 print(new.insertatFirst(10))
+print(new.insertatFirst(12))
 print(new.insertAtlast(11))
 print(new.search(11))
 print(new.isEmpty())

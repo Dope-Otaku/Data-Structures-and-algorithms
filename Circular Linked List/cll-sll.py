@@ -1,4 +1,4 @@
-#circular linked list
+#circular singly linked list
 
 class Node:
     def __init__(self, item=None , next=None):

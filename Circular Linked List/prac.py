@@ -98,20 +98,69 @@ class CLL:
                 temp.next = self.last.next
                 self.last = temp
     
-    def delete_after(self, item):
-        pass
+    def delete_item(self, data):
+        if not self.isEmpty():
+            if self.last.next==self.last:
+                if self.last.item==data:
+                    self.last = None
+                else:
+                    if self.last.next.item==data:
+                        self.delete_first()
+                    else:
+                        temp = self.last.next
+                        while temp!=self.last:
+                            if temp.next.item==data:
+                                if self.last.item==data:
+                                    self.delete_last()
+                                break
+                            if temp.next.item==data:
+                                temp.next = temp.next.next
+                                break
+                            temp =temp.next
 
+    def __iter__(self):
+        if self.last == None:
+            return CLLIter(None)
+        else:
+            return CLLIter(self.last.next)
+class CLLIter:
+    def __init__(self, start):
+        self.current = start
+        self.start = start
+        self.count = 0
 
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if self.current==None:
+            raise StopIteration
+        if self.current == self.start and self.count == 1:
+            raise StopIteration
+        else:
+            self.count = 1
+        data = self.current.item
+        self.current = self.current.next
+        return data
+    
     
 new = CLL()
 
 print(new)
 print(new.insertatFirst(9))
 print(new.insertatFirst(10))
+print(new.insertatFirst(13))
 print(new.insertatFirst(12))
 print(new.insertAtlast(11))
+print(new.insertAtlast(14))
+print(new.insertAtlast(15))
 print(new.search(11))
 print(new.isEmpty())
 print(new.printlist())
 print(new.delete_first())
 print(new.printlist())
+print(new.delete_item(9))
+
+for x in new:
+    print(x, end=" ")
+print()

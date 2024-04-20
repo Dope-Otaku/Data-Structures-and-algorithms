@@ -40,6 +40,10 @@ class CLL:
 
     def search(self, data):
         temp = self.start
+        if temp is None:
+            return None
+        if temp.item==data:
+            return f"{temp.item} found at temp"
         while True:
             if temp.item == data:
                 return f"item: {temp.item} found at {temp}"
@@ -48,11 +52,45 @@ class CLL:
                 break
         return f"item: {data} not found"
 
+    def insert_after(self, after_item, data):
+        if self.isEmpty():
+            print("List is empty.")
+            return
+        
+        # Search for the node with the given item value
+        temp = self.start
+        while True:
+            if temp.item == after_item:
+                break
+            temp = temp.next
+            if temp == self.start:
+                print(f"Item {after_item} not found.")
+                return
+
+        node = Node(data)
+
+        # If the found node is the last node
+        if temp == self.start.prev:
+            self.insert_At_last(data)
+            return
+
+        # Update the next pointers
+        node.next = temp.next
+        temp.next.prev = node
+
+        # Update the prev pointers
+        temp.next = node
+        node.prev = temp
+
+        return(f"Inserted {data} after {after_item}.")
+
+
 new = CLL()
 print(new.isEmpty())
 print(new.insert_At_first(1).item)
 print(new.insert_At_first(2).item)
 print(new.insert_At_first(3).item)
-print(new.insert_At_first(4).item)
+# print(new.insert_At_first(4).item)
 print(new.insert_At_last(5).item)
-print(new.search(1))
+print(new.insert_after(3, 4))
+print(new.search(4))

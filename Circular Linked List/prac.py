@@ -71,11 +71,6 @@ class CLL:
             # Print the last item
             print(temp.item)
             
-        
-
-        
-
-
     def insertAfter(self, temp, data):
         if temp is not None:
             node = Node(data, temp.next)
@@ -83,6 +78,15 @@ class CLL:
             if temp == self.last:
                 self.last=node
             
+    def delete_first(self, item):
+        pass
+    def delete_last(self, item):
+        pass
+    def delete_after(self, item):
+        pass
+
+
+    
 new = CLL()
 
 print(new)

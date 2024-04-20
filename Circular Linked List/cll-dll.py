@@ -12,6 +12,19 @@ class CLL:
 
     def isEmpty(self):
         return self.start==None
+
+    def insert_At_first(self, data):
+        node = Node(data)
+        if not self.isEmpty():
+            first_node = self.start
+            node.next = first_node
+            node.prev = self.start.prev
+            return node
+        else:
+            node.prev = self.start
+            node.next = node
+            return node
     
 new = CLL()
 print(new.isEmpty())
+print(new.insert_At_first(1))

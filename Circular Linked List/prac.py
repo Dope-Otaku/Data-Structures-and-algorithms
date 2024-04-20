@@ -78,10 +78,26 @@ class CLL:
             if temp == self.last:
                 self.last=node
             
-    def delete_first(self, item):
-        pass
-    def delete_last(self, item):
-        pass
+    def delete_first(self):
+        if not self.isEmpty():
+            if self.last.next == self.last:
+                self.last = None
+            else:
+                self.last.next = self.last.next.next
+                print(self.last.next.item) # Print the item of the node being deleted
+            return f"successfully deleted from the list" 
+    
+    def delete_last(self):
+        if not self.isEmpty():
+            if self.last.next == self.last:
+                self.last = None
+            else:
+                temp = self.last.next
+                while temp.next!= self.last:
+                    temp = temp.next
+                temp.next = self.last.next
+                self.last = temp
+    
     def delete_after(self, item):
         pass
 
@@ -96,4 +112,6 @@ print(new.insertatFirst(12))
 print(new.insertAtlast(11))
 print(new.search(11))
 print(new.isEmpty())
+print(new.printlist())
+print(new.delete_first())
 print(new.printlist())

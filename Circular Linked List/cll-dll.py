@@ -18,7 +18,7 @@ class CLL:
             node.next = first_node
             node.prev = self.start.prev
             first_node.prev = node
-        else:
+        else:  
             node.prev = node
             node.next = node
         self.start = node
@@ -84,13 +84,26 @@ class CLL:
 
         return(f"Inserted {data} after {after_item}.")
 
+    def delete_at_first(self):
+        if self.isEmpty():
+            return f"it is emoty"
+        if self.start == self.start.next:
+            self.start = None
+            return f'the deleted the only node'
+        
+
+
 
 new = CLL()
 print(new.isEmpty())
 print(new.insert_At_first(1).item)
 print(new.insert_At_first(2).item)
 print(new.insert_At_first(3).item)
-# print(new.insert_At_first(4).item)
 print(new.insert_At_last(5).item)
 print(new.insert_after(3, 4))
 print(new.search(4))
+# print(new.isEmpty())
+
+print(new.delete_at_first())
+# print(new.isEmpty())
+

@@ -95,15 +95,15 @@ class CLL:
 
 
 new = CLL()
-print(new.isEmpty())
-print(new.insert_At_first(1).item)
-print(new.insert_At_first(2).item)
-print(new.insert_At_first(3).item)
-print(new.insert_At_last(5).item)
-print(new.insert_after(3, 4))
-print(new.search(4))
 # print(new.isEmpty())
+# print(new.insert_At_first(1).item)
+# print(new.insert_At_first(2).item)
+# print(new.insert_At_first(3).item)
+print(new.insert_At_last(5).item)
+# print(new.insert_after(3, 4))
+# print(new.search(4))
+print(new.isEmpty())
 
 print(new.delete_at_first())
-# print(new.isEmpty())
+print(new.isEmpty())
 

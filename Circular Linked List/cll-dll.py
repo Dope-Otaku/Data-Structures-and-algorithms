@@ -91,15 +91,22 @@ class CLL:
             print(self.start.item) #the node value which is being deleted is this
             self.start = None
             return f'we deleted the only node'
-        
-        
+        #first we exchange the last node pointer to second node
+        last_node = self.start.prev
+        first_node_item = self.start.item
+        print(last_node.item)
+        self.start.next.prev = last_node
+        last_node.next = self.start.next
+        #change the pointer to next
+        self.start = self.start.next
+        return f"deleted the first node ({first_node_item})"
 
 
 
 new = CLL()
 # print(new.isEmpty())
 # print(new.insert_At_first(1).item)
-# print(new.insert_At_first(2).item)
+print(new.insert_At_first(2).item)
 # print(new.insert_At_first(3).item)
 print(new.insert_At_last(5).item)
 # print(new.insert_after(3, 4))

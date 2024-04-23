@@ -88,8 +88,10 @@ class CLL:
         if self.isEmpty():
             return f"it is emoty"
         if self.start == self.start.next:
+            print(self.start.item) #the node value which is being deleted is this
             self.start = None
-            return f'the deleted the only node'
+            return f'we deleted the only node'
+        
         
 
 

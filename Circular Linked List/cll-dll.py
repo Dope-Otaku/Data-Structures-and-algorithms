@@ -86,7 +86,7 @@ class CLL:
 
     def delete_at_first(self):
         if self.isEmpty():
-            return f"it is emoty"
+            return f"it is empty"
         if self.start == self.start.next:
             print(self.start.item) #the node value which is being deleted is this
             self.start = None
@@ -101,7 +101,20 @@ class CLL:
         self.start = self.start.next
         return f"deleted the first node ({first_node_item})"
 
-
+    def delete_at_last(self):
+        if self.isEmpty():
+            return f"it is empty"
+        if self.start == self.start.next:
+            print(self.start.item) #the node value which is being deleted is this
+            self.start = None
+            return f'we deleted the only node'
+        #last_node
+        last_node = self.start.prev
+        last = last_node.item
+        new_node = last_node.prev
+        self.start.prev = new_node
+        new_node.next = self.start
+        return f"deletetd the last element {last}"
 
 new = CLL()
 # print(new.isEmpty())
@@ -113,6 +126,7 @@ print(new.insert_At_last(5).item)
 # print(new.search(4))
 print(new.isEmpty())
 
-print(new.delete_at_first())
+# print(new.delete_at_first())
+print(new.delete_at_last())
 print(new.isEmpty())
 

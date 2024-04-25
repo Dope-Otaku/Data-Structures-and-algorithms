@@ -116,17 +116,27 @@ class CLL:
         new_node.next = self.start
         return f"deletetd the last element {last}"
 
+    #def delete_after(self)
+    def printlist(self):
+        temp = self.start
+        if temp is not None:
+            print(temp.item, end=" ")
+            temp = temp.next
+            while temp is not self.start:
+                print(temp.item, end=" ")
+                temp = temp.next
 new = CLL()
-# print(new.isEmpty())
-# print(new.insert_At_first(1).item)
-print(new.insert_At_first(2).item)
-# print(new.insert_At_first(3).item)
-print(new.insert_At_last(5).item)
-# print(new.insert_after(3, 4))
-# print(new.search(4))
 print(new.isEmpty())
+print(new.insert_At_first(1).item)
+print(new.insert_At_first(2).item)
+print(new.insert_At_first(3).item)
+print(new.insert_At_last(5).item)
+print(new.insert_after(3, 4))
+# print(new.search(4))
+# print(new.isEmpty())
 
 # print(new.delete_at_first())
-print(new.delete_at_last())
+# print(new.delete_at_last())
+print(new.printlist())
 print(new.isEmpty())
 

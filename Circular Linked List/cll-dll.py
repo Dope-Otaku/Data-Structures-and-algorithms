@@ -132,6 +132,8 @@ class CLL:
                             temp.next.prev = temp.prev
                             temp.prev.next = temp.next
                             return f"deleted"
+    #delet _item needs modification as the code is not working properly 
+
     def printlist(self):
         temp = self.start
         if temp is not None:
@@ -140,6 +142,18 @@ class CLL:
             while temp is not self.start:
                 print(temp.item, end=" ")
                 temp = temp.next
+
+    def __iter__(self):
+        return CDLLIterator(self.start)
+
+class CDLLIterator:
+    def __init__(self, start):
+        self.current = start
+        self.start = start
+
+    def __iter__(self):
+        return self
+
 new = CLL()
 print(new.isEmpty())
 print(new.insert_At_first(1).item)

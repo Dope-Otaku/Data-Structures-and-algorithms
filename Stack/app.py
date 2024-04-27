@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#mindstix question solutions
 
 import re
 import csv

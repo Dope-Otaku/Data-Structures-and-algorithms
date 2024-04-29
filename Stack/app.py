@@ -35,12 +35,17 @@ class Stack():
             return f"the top value is {self.list[-1]}"
 
 
-
+    def size(self):
+        if not self.is_empty():
+            return f"the size of stack is {len(self.list)}"
+        else:
+            raise IndexError("stack is empty")
 
 new = Stack()
 print(new.is_empty())
 print(new.push(1))
 print(new.push(2))
 print(new.pop(1))
-print(new.peek())
+# print(new.peek())
+print(new.size())
 print(new.is_empty())

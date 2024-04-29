@@ -19,20 +19,19 @@ class Stack():
         return f"added | list was not empty"
     
     def pop(self, data):
-        if self.is_empty():
-            return f"list is empty"
-        for i in range(len(self.list)):
-            if self.list[i] == data:
-                self.list.remove(data)
-                return f"deleted data: {data} from the stack"
-            else:
-                raise IndexError("Stack is Empty!")
+        if not self.is_empty():
+            self.list.remove(data)
+            return f"stack is deleted"
+        else:
+            raise IndexError("stack is empty!")
+
 
     def peek(self):
-        if self.is_empty():
-            return f"stack is empty!"
+        if not self.is_empty():
+            val = self.list[-1]
+            return val
         else:
-            return f"the top value is {self.list[-1]}"
+            raise IndexError("stack is empty!")
 
 
     def size(self):
@@ -45,7 +44,7 @@ new = Stack()
 print(new.is_empty())
 print(new.push(1))
 print(new.push(2))
-print(new.pop(1))
-# print(new.peek())
+# print(new.pop(1))
+print(new.peek())
 print(new.size())
 print(new.is_empty())

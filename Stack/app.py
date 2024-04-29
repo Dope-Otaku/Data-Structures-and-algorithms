@@ -1,6 +1,6 @@
 #stack using list
 
-class SLL():
+class Stack():
     def __init__(self, item = None):
         self.list = []
         self.item = item
@@ -25,12 +25,22 @@ class SLL():
             if self.list[i] == data:
                 self.list.remove(data)
                 return f"deleted data: {data} from the stack"
-            return f"not in the stack {data}"
+            else:
+                raise IndexError("Stack is Empty!")
+
+    def peek(self):
+        if self.is_empty():
+            return f"stack is empty!"
+        else:
+            return f"the top value is {self.list[-1]}"
 
 
 
-new = SLL()
+
+new = Stack()
 print(new.is_empty())
 print(new.push(1))
+print(new.push(2))
 print(new.pop(1))
+print(new.peek())
 print(new.is_empty())

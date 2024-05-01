@@ -1,4 +1,5 @@
 #stack using list
+# stack using inherited lst and 
 
 class Stack():
     def __init__(self, item = None):

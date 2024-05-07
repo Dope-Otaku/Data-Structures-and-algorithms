@@ -119,6 +119,14 @@ class Sll:
                 return f"failed"
         else:
             return f'list is empty'
+
+    def delete_at_first(self):
+        if self.isEmpty() != None:
+            temp = self.start
+            temp.next = None
+            return f"deleted the first node {temp.item}"
+
+
     def Delete(self, value):
         if self.isEmpty() != None:
             temp = self.start
@@ -143,6 +151,9 @@ class Sll:
         temp = self.start
         temp2 = self.start
 
+        if self.isEmpty():
+            return f"list is empty"
+
         while temp2 is not None and temp2.next is not None:
             temp = temp.next
             temp2 = temp2.next.next
@@ -153,22 +164,24 @@ class Sll:
     
 
 ll =  Sll()
-print(ll.insert_at_first(2))
+# print(ll.insert_at_first(2))
 # print(ll.isEmpty())
 # print(ll.insert_at_last(7))  //error in this function fix it
-print(ll.InsertBefore(2, 3))
-print(ll.InsertBefore(3, 4))
-print(ll.InsertBefore(4, 5))
-print(ll.InsertBefore(5, 6))
-print(ll.InsertBefore(6, 7))
-print(ll.InsertBefore(7, 8))
-print(ll.InsertBefore(8, 9))
+# print(ll.InsertBefore(2, 3))
+# print(ll.InsertBefore(3, 4))
+# print(ll.InsertBefore(4, 5))
+# print(ll.InsertBefore(5, 6))
+# print(ll.InsertBefore(6, 7))
+# print(ll.InsertBefore(7, 8))
+# print(ll.InsertBefore(8, 9))
+# print(ll.delete_at_first())
+# print(ll.Delete(9))
 # print(ll.search(2))
 # print(ll.search(9))
 # print(ll.search(1))
 # print(ll.Delete(2))
 # print(ll.search(2))
 # print()
-ll.print_list()
-print("\n", ll.findMid())
-print(ll.sortList())
+# print(ll.print_list())
+# print("\n", ll.findMid())
+# print(ll.sortList())

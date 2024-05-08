@@ -1,4 +1,4 @@
-#implementing stack using inheriting list class
+#implementing stack using inheriting singly linked list so please create a new code this one is dead
 from prac import *    #in sll there are some issue with the code id what is happening
 
 class Stack(Sll):

@@ -28,13 +28,17 @@ class Queue:
     def dequeue(self):
         self.item.pop(0)
         return "deleted succcessfully"
+    
+    def size(self):
+        return len(self.item)
 
 l = Queue()
 
 print(l.enqueue(1))
 print(l.enqueue(2))
 print(l.enqueue(3))
-print(l.dequeue(3))
+print(l.dequeue())
 print(l.itemQ())
 print(l.get_front())
 print(l.get_rear())
+print(l.size())

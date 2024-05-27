@@ -97,9 +97,9 @@
 
 #q.11 write a recursive function to calculate sum of squares of firrst N natural numbers
 
-def sq(n):
-    if n == 0:
-        return 0
-    return sq(n-1)+n**2
+# def sq(n):
+#     if n == 0:
+#         return 0
+#     return sq(n-1)+n**2
 
-print(sq(5))
+# print(sq(5))

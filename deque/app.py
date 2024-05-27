@@ -23,6 +23,17 @@ class Deque:
         return self.item[len(self.item)-1]
     def get_front(self):
         return self.item[0]
+    
+    def delete_front(self):
+        print(f"deleted the the first element {self.get_front()}")
+        self.item.remove(self.get_front())
+    
+    def delete_rear(self):
+        print(f"deleted the the first element {self.get_rear()}")
+        self.item.pop()
+
+    def size(self):
+        return len(self.item)
 
 q = Deque()
 
@@ -36,4 +47,9 @@ print(q.insert_rear(2))
 print(q.get_rear())
 print(q.get_front())
 print(q.print_all())
+print(q.delete_front())
+print(q.print_all())
+print(q.delete_rear())
+print(q.print_all())
 print(q.is_empty())
+print(q.size())

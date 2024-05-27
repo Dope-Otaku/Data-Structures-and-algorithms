@@ -74,3 +74,23 @@
 #     return s
     
 # print(num(10))
+
+#q.9 write a recursive function to calculate sum of first N even natural numbers
+
+# def num(n):
+#     if n == 1:
+#         return 2
+    
+#     s = num(n-1) + (2*n)
+#     return s
+    
+# print(num(2))
+
+#q.10 write a recursive function to calculate factorial of a number
+
+def factorial(n):
+    if n==0:
+        return 1
+    return factorial(n-1) * n
+
+print(factorial(4))

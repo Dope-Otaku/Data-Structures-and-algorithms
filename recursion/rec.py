@@ -38,9 +38,18 @@
 
 #q.5 write a recursive fnction to print first N odd natural numbers in reverse order
 
-def odd(n):
-    if n>0:
-        print(2*n-1, end=' ')
-        odd(n-1)
+# def odd(n):
+#     if n>0:
+#         print(2*n-1, end=' ')
+#         odd(n-1)
 
-print(odd(10))
+# print(odd(10))
+
+#q.6 write a recursive fnction to print first N even natural numbers in reverse order
+
+def even(n):
+    if n>0:
+        print(2*n, end=' ')
+        even(n-1)
+
+print(even(10))

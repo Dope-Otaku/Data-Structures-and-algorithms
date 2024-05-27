@@ -88,9 +88,18 @@
 
 #q.10 write a recursive function to calculate factorial of a number
 
-def factorial(n):
-    if n==0:
-        return 1
-    return factorial(n-1) * n
+# def factorial(n):
+#     if n==0:
+#         return 1
+#     return factorial(n-1) * n
 
-print(factorial(4))
+# print(factorial(4))
+
+#q.11 write a recursive function to calculate sum of squares of firrst N natural numbers
+
+def sq(n):
+    if n == 0:
+        return 0
+    return sq(n-1)+n**2
+
+print(sq(5))

@@ -47,9 +47,19 @@
 
 #q.6 write a recursive fnction to print first N even natural numbers in reverse order
 
-def even(n):
-    if n>0:
-        print(2*n, end=' ')
-        even(n-1)
+# def even(n):
+#     if n>0:
+#         print(2*n, end=' ')
+#         even(n-1)
 
-print(even(10))
+# print(even(10))
+
+#q.7 write a recursive function to calculate sum of first N natural numbers
+
+def sum(n):
+    if n <= 0:
+        return 0
+    s = sum(n-1) + n
+    return s
+    
+print(sum(5))

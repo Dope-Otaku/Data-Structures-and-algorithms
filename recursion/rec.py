@@ -56,10 +56,21 @@
 
 #q.7 write a recursive function to calculate sum of first N natural numbers
 
-def sum(n):
-    if n <= 0:
-        return 0
-    s = sum(n-1) + n
-    return s
+# def sum(n):
+#     if n <= 0:
+#         return 0
+#     s = sum(n-1) + n
+#     return s
     
-print(sum(5))
+# print(sum(5))
+
+#q.8 write a recursive function to calculate sum of first N odd natural numbers
+
+# def num(n):
+#     if n == 1:
+#         return 1
+    
+#     s = num(n-1) + (2*n-1)
+#     return s
+    
+# print(num(10))

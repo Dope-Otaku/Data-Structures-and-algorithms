@@ -29,9 +29,18 @@
 
 #q.4 write a recursive fnction to print first N even natural numbers
 
-def even(n):
-    if n>0:
-        even(n-1)
-        print(2*n, end=' ')
+# def even(n):
+#     if n>0:
+#         even(n-1)
+#         print(2*n, end=' ')
 
-print(even(10))
+# print(even(10))
+
+#q.5 write a recursive fnction to print first N odd natural numbers in reverse order
+
+def odd(n):
+    if n>0:
+        print(2*n-1, end=' ')
+        odd(n-1)
+
+print(odd(10))

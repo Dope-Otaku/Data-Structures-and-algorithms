@@ -1,5 +1,7 @@
 #we will be implementing tree ds so we start again
 
-class Tree:
-    def __init__(self) -> None:
-        pass
+class Node:
+    def __init__(self, item, node) -> None:
+        self.item = item
+        self.node = node
+        

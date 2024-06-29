@@ -5,3 +5,8 @@ class Node:
         self.item = item
         self.left = left
         self.right = right
+
+
+class Tree:
+    def __init__(self, root=None):
+        self.root = root

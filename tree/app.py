@@ -1,7 +1,7 @@
 #we will be implementing tree ds so we start again
 
 class Node:
-    def __init__(self, item, node) -> None:
+    def __init__(self, item=None, left=None, right=None):
         self.item = item
-        self.node = node
-        
+        self.left = left
+        self.right = right

@@ -22,19 +22,29 @@ class BinarySearchTree:
         self.root = node
         return f"data: {data} inserted at root node!"
 
-    def insert_at_node(self, item):
-        self.root = node
-        node = Node(item=item)
-        #let us say we need to insert this {70,10,25,40,50}
-        if node.item == item:
-            return f"duplicates are not allowed"
+    def insert_at_node(self, data):
+        #self.root.item this is directly pointing atat our root node objects 
+        print(self.root.item)
+        start = self.root.item
+        if start > data:
+            print('big')
+        elif start < data:
+            print('small')
         else:
-            if node.item > item:
-                node.left = node
-            else:
-                node.right = node
+            return f"Duplicates are not allowed!"
+        # self.root = node
+        # node = Node(item=item)
+        # #let us say we need to insert this {70,10,25,40,50}
+        # if node.item == item:
+        #     return f"duplicates are not allowed"
+        # else:
+        #     if node.item > item:
+        #         node.left = node
+        #     else:
+        #         node.right = node
 
-        return f"{node.item} at root node"
+        # return f"{node.item} at root node"
 
 new = BinarySearchTree()
-print(new.inser_atfirst(2))
+print(new.inser_atfirst(70))
+print(new.insert_at_node(70))

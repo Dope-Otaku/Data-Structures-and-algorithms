@@ -24,12 +24,18 @@ class BinarySearchTree:
 
     def insert_at_node(self, data):
         #self.root.item this is directly pointing atat our root node objects 
-        print(self.root.item)
-        start = self.root.item
-        if start > data:
-            print('big')
-        elif start < data:
-            print('small')
+        # print(self.root.item)
+        start = self.root
+        if start.item > data:
+            if start.left == None:
+                node = Node(item=data)
+                start.left = node
+                return f"inserted on left side since it({data}<{start.item}) was smaller"
+        elif start.item < data:
+            if start.right == None:
+                node = Node(item=data)
+                start.left = node
+                return f"inserted on right side since it({data}>{start.item}) was bigger"
         else:
             return f"Duplicates are not allowed!"
         # self.root = node
@@ -47,4 +53,5 @@ class BinarySearchTree:
 
 new = BinarySearchTree()
 print(new.inser_atfirst(70))
-print(new.insert_at_node(70))
+print(new.insert_at_node(10))
+print(new.insert_at_node(80))

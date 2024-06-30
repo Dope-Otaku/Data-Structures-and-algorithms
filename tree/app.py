@@ -1,4 +1,5 @@
 #we will be implementing tree ds so we start again
+# today we created this two different class objects
 
 class Node:
     def __init__(self, item=None, left=None, right=None):

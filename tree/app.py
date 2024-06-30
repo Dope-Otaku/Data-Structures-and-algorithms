@@ -17,10 +17,24 @@ class BinarySearchTree:
     #     self.val.append(1)
     #     return f"{self.val}"
     
-    def insert_at_node(self, item):
-        node = Node(item=item)
+    def inser_atfirst(self, data):
+        node = Node(item=data) #initiated a new node
         self.root = node
+        return f"data: {data} inserted at root node!"
+
+    def insert_at_node(self, item):
+        self.root = node
+        node = Node(item=item)
+        #let us say we need to insert this {70,10,25,40,50}
+        if node.item == item:
+            return f"duplicates are not allowed"
+        else:
+            if node.item > item:
+                node.left = node
+            else:
+                node.right = node
+
         return f"{node.item} at root node"
 
 new = BinarySearchTree()
-print(new.insert_at_root(2))
+print(new.inser_atfirst(2))

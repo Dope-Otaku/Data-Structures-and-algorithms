@@ -31,11 +31,23 @@ class BinarySearchTree:
                 node = Node(item=data)
                 start.left = node
                 return f"inserted on left side since it({data}<{start.item}) was smaller"
+            else: #from this else point onards it will start forming a tree
+                # print(f"hello {start.left.item} | {start.right.item}") #just for checking my values
+                if start.left.item > data:
+                    node = Node(item=data)
+                    start.left.left = node
+                    return f"inserted on right side since it was smaller" 
         elif start.item < data:
             if start.right == None:
                 node = Node(item=data)
-                start.left = node
+                start.right = node
                 return f"inserted on right side since it({data}>{start.item}) was bigger"
+            else: #from this else point onards it will start forming a tree
+                # print(f"hello {start.left.item} | {start.right.item}") #just for checking my values
+                if start.left.item < data:
+                    node = Node(item=data)
+                    start.left.right = node
+                    return f"inserted on right side since it was bigger"
         else:
             return f"Duplicates are not allowed!"
         # self.root = node
@@ -55,3 +67,7 @@ new = BinarySearchTree()
 print(new.inser_atfirst(70))
 print(new.insert_at_node(10))
 print(new.insert_at_node(80))
+print(new.insert_at_node(40))
+print(new.insert_at_node(50))
+print(new.insert_at_node(60))
+print(new.insert_at_node(15))

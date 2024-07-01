@@ -13,9 +13,8 @@ class BinarySearchTree:
         self.root = None   #ref variable which will point our root node at first
         # self.val = []    #we will not use a list as it will use another ds to create and hence will be much complex later on
 
-    # def printA(self):
-    #     self.val.append(1)
-    #     return f"{self.val}"
+    def insert(self, data):
+        self.root= self.rinsert(self.root, data)
     
     def inser_atfirst(self, data):#should we even use his bloack i have no idea right now!
         node = Node(item=data) #initiated a new node

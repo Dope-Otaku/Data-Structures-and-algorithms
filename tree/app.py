@@ -50,6 +50,7 @@ class BinarySearchTree:
                     return f"inserted on right side since it was bigger"
         else:
             return f"Duplicates are not allowed!"
+            #they are not able to enter this block
         # self.root = node
         # node = Node(item=item)
         # #let us say we need to insert this {70,10,25,40,50}

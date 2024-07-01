@@ -16,6 +16,12 @@ class BinarySearchTree:
     def insert(self, data):
         self.root= self.rinsert(self.root, data)
     
+    def rinsert(self, root, data):
+        if root is None:
+            return Node(data)
+
+
+
     def inser_atfirst(self, data):#should we even use his bloack i have no idea right now!
         node = Node(item=data) #initiated a new node
         self.root = node

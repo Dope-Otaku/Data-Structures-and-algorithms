@@ -20,7 +20,15 @@ class BinarySearchTree:
         if root is None:
             return Node(data)
 
+        if data < root.item:
+            root.left = self.rinsert(root.left, data)
+            print("left")
 
+        elif data > root.item:
+            root.right = self.rinsert(root.right, data)
+            print("right")
+
+        return root
 
     def inser_atfirst(self, data):#should we even use his bloack i have no idea right now!
         node = Node(item=data) #initiated a new node
@@ -70,10 +78,9 @@ class BinarySearchTree:
         # return f"{node.item} at root node"
 
 new = BinarySearchTree()
-print(new.inser_atfirst(70))
-print(new.insert_at_node(10))
-print(new.insert_at_node(80))
-print(new.insert_at_node(40))
-print(new.insert_at_node(50))
-print(new.insert_at_node(60))
-print(new.insert_at_node(15))
+
+print(new.insert(2))
+print(new.insert(1.1))
+print(new.insert(39))
+print(new.insert(1))
+print(new.insert(45))

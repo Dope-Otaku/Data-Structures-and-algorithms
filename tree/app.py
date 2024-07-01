@@ -17,7 +17,7 @@ class BinarySearchTree:
     #     self.val.append(1)
     #     return f"{self.val}"
     
-    def inser_atfirst(self, data):
+    def inser_atfirst(self, data):#should we even use his bloack i have no idea right now!
         node = Node(item=data) #initiated a new node
         self.root = node
         return f"data: {data} inserted at root node!"

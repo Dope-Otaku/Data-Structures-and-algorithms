@@ -32,7 +32,7 @@ class BinarySearchTree:
                 start.left = node
                 return f"inserted on left side since it({data}<{start.item}) was smaller"
             else: #from this else point onards it will start forming a tree
-                # print(f"hello {start.left.item} | {start.right.item}") #just for checking my values
+                print(f"hello {start.left.item} | {start.right.item}") #just for checking my values
                 if start.left.item > data:
                     node = Node(item=data)
                     start.left.left = node
@@ -43,7 +43,7 @@ class BinarySearchTree:
                 start.right = node
                 return f"inserted on right side since it({data}>{start.item}) was bigger"
             else: #from this else point onards it will start forming a tree
-                # print(f"hello {start.left.item} | {start.right.item}") #just for checking my values
+                print(f"hello {start.left.item} | {start.right.item}") #just for checking my values
                 if start.left.item < data:
                     node = Node(item=data)
                     start.left.right = node

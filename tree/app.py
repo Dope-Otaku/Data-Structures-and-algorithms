@@ -9,8 +9,8 @@ class Node:
 
 
 class BinarySearchTree:
-    def __init__(self, root=None):
-        self.root = root   #ref variable which will point our root node at first
+    def __init__(self):
+        self.root = None   #ref variable which will point our root node at first
         # self.val = []    #we will not use a list as it will use another ds to create and hence will be much complex later on
 
     # def printA(self):

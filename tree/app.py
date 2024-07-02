@@ -1,7 +1,7 @@
 #we will be implementing tree ds so we start again
 # today we created this two different class objects
 #33:59
-
+#need to watch recursion vid again ig
 class Node:
     def __init__(self, item=None, left=None, right=None):
         self.item = item

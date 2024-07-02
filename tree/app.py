@@ -22,7 +22,7 @@ class BinarySearchTree:
             return Node(data)
 
         if data < root.item:
-            root.left = self.rinsert(root.left, data)
+            root.left = self.rinsert(root.left, data) #this paert specifically
             print("left")
 
         elif data > root.item:

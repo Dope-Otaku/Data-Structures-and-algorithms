@@ -31,8 +31,9 @@ class BinarySearchTree:
 
         return root
 
+#need to one again learn this
     def search(self, data):
-        return self.rsearch(self.root, data)
+        return self.rsearch(self.root, data) #again this recursion
     
     def rsearch(self, root, data):
         if root is None or root.item==data:

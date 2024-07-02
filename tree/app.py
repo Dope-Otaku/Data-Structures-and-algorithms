@@ -1,5 +1,6 @@
 #we will be implementing tree ds so we start again
 # today we created this two different class objects
+#33:59
 
 class Node:
     def __init__(self, item=None, left=None, right=None):
@@ -16,7 +17,7 @@ class BinarySearchTree:
     def insert(self, data):
         self.root= self.rinsert(self.root, data)
     
-    def rinsert(self, root, data):
+    def rinsert(self, root, data): #recursion function started still not able to get it
         if root is None:
             return Node(data)
 

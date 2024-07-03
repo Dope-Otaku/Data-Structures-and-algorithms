@@ -86,6 +86,18 @@ class BinarySearchTree: #name can be anything
             self.rinorder(root.right, result)
             # result.append(root.item)
     
+    def preorder(self):
+        result = []
+        self.rpreorder(self.root, result)
+        return result
+
+
+    def rpreorder(self, root, result):
+        if root:
+            self.rpreorder(root.left, result)
+            result.append(root.item)
+
+            self.rpreorder(root.right, result)
 
 
 new = BinarySearchTree()

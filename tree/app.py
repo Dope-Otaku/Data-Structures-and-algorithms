@@ -5,6 +5,8 @@
 # ok so i have a slight idea of how does this recursion takes place and also  
 # so first we normally insert it and then we call a another function
 #and then when it inserts the third value it simply bypasses the prev vlues and just saved in the new left or righ memmory pf the tree
+
+#now the traversing part is working very well
 class Node:
     def __init__(self, item=None, left=None, right=None):
         self.item = item
@@ -17,37 +19,37 @@ class BinarySearchTree: #name can be anything
         self.root = None   #ref variable which will point our root node at first
         # self.val = []    #we will not use a list as it will use another ds to create and hence will be much complex later on
 
-    # def insert(self, data):
-    #     self.root= self.rinsert(self.root, data)
-    
-    # def rinsert(self, root, data): #recursion function started still not able to get it
-    #     if root is None:
-    #         return Node(data)
-
-    #     if data < root.item:
-    #         root.left = self.rinsert(root.left, data) #this paert specifically
-    #         print("left")
-
-    #     elif data > root.item:
-    #         root.right = self.rinsert(root.right, data)
-    #         print("right")
-
-    #     return root
-
-
     def insert(self, data):
-        self.root = self.rinsert(self.root, data)
-
-    def rinsert(self, root, data):
+        self.root= self.rinsert(self.root, data)
+    
+    def rinsert(self, root, data): #recursion function started still not able to get it
         if root is None:
             return Node(data)
-        elif data < root.item:
-            root.left = self.rinsert(root.left, data)
+
+        if data < root.item:
+            root.left = self.rinsert(root.left, data) #this paert specifically
+            print("left")
 
         elif data > root.item:
             root.right = self.rinsert(root.right, data)
+            print("right")
 
         return root
+
+
+    # def insert(self, data):
+    #     self.root = self.rinsert(self.root, data)
+
+    # def rinsert(self, root, data):
+    #     if root is None:
+    #         return Node(data)
+    #     elif data < root.item:
+    #         root.left = self.rinsert(root.left, data)
+
+    #     elif data > root.item:
+    #         root.right = self.rinsert(root.right, data)
+
+    #     return root
 
 #need to one again learn this
     # def search(self, data):
@@ -94,17 +96,34 @@ class BinarySearchTree: #name can be anything
 
     def rpreorder(self, root, result):
         if root:
+            result.append(root.item)
             self.rpreorder(root.left, result)
+            self.rpreorder(root.right, result)
+
+    def postorder(self):
+        result = []
+        self.rpostorder(self.root, result)
+        return result
+
+
+    def rpostorder(self, root, result):
+        if root:
+            self.rpostorder(root.left, result)
+            self.rpostorder(root.right, result)
             result.append(root.item)
 
-            self.rpreorder(root.right, result)
 
 
 new = BinarySearchTree()
 
-print(new.insert(2))
-print(new.insert(1.1))
-print(new.insert(39))
-print(new.insert(1))
-print(new.insert(45))
-print(new.search(39))
+print(new.insert(50))
+print(new.insert(30))
+print(new.insert(10))
+print(new.insert(40))
+print(new.insert(80))
+print(new.insert(70))
+print(new.insert(100))
+print(new.search(40))
+print(new.inorder())
+print(new.preorder())
+print(new.postorder())

@@ -3,6 +3,7 @@
 #33:59
 #need to watch recursion vid again ig
 # ok so i have a slight idea of how does this recursion takes place and also  
+# so first we normally insert it and then we call a another function
 class Node:
     def __init__(self, item=None, left=None, right=None):
         self.item = item

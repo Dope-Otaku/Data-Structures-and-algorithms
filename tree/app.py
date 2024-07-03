@@ -73,6 +73,20 @@ class BinarySearchTree: #name can be anything
         else:
             return self.rinsert(root.right, data)
 
+    def inorder(self):
+        result = []
+        self.rinorder(self.root, result)
+        return result
+    
+    def rinorder(self, root, result):
+        if root:
+            self.rinorder(root.left, result)
+            result.append(root.item)
+
+            self.rinorder(root.right, result)
+            # result.append(root.item)
+    
+
 
 new = BinarySearchTree()
 

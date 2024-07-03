@@ -2,7 +2,7 @@
 # today we created this two different class objects
 #33:59
 #need to watch recursion vid again ig
-# ok so i have a slight de 
+# ok so i have a slight idea of how does this recursion takes place and also  
 class Node:
     def __init__(self, item=None, left=None, right=None):
         self.item = item

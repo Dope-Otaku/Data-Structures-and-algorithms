@@ -113,6 +113,14 @@ class BinarySearchTree: #name can be anything
             result.append(root.item)
 
 
+    def delete(self, data):
+        return self.rdelete(self.root, data)
+
+    def rdelete(self, root, data):
+        if root is None:
+            return None
+        if data < root.item:
+            root.left = self.rdelete
 
 new = BinarySearchTree()
 

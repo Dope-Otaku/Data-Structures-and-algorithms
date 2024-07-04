@@ -135,6 +135,12 @@ class BinarySearchTree: #name can be anything
                 root.left = self.rdelete(root.left, data)
 
 
+    def maxValue(self, temp):
+        cur = temp
+        while cur.left is not None:
+            cur = cur.left
+        return cur.item
+
 
 new = BinarySearchTree()
 

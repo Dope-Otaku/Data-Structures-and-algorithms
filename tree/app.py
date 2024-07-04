@@ -112,6 +112,16 @@ class BinarySearchTree: #name can be anything
             self.rpostorder(root.right, result)
             result.append(root.item)
 
+    def minValue(self):
+        res = self.inorder()[0]
+        # ans = res[0]
+        # return ans
+        return res
+    
+    def maxValue(self):
+        res = self.inorder()
+        ans = res[len(res)-1]
+        return ans
 
     def delete(self, data):
         return self.rdelete(self.root, data)
@@ -120,7 +130,11 @@ class BinarySearchTree: #name can be anything
         if root is None:
             return None
         if data < root.item:
-            root.left = self.rdelete
+            root.left = self.rdelete(root.left, data)
+            if root.left is None or root.right is None:
+                root.left = self.rdelete(root.left, data)
+
+
 
 new = BinarySearchTree()
 
@@ -135,3 +149,5 @@ print(new.search(40))
 print(new.inorder())
 print(new.preorder())
 print(new.postorder())
+print(new.minValue())
+print(new.maxValue())

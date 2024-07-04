@@ -112,13 +112,13 @@ class BinarySearchTree: #name can be anything
             self.rpostorder(root.right, result)
             result.append(root.item)
 
-    def minValue(self):
+    def minValue_full(self):
         res = self.inorder()[0]
         # ans = res[0]
         # return ans
         return res
     
-    def maxValue(self):
+    def maxValue_full(self):
         res = self.inorder()
         ans = res[len(res)-1]
         return ans

@@ -191,6 +191,18 @@ class SinglyLinkedList:
     def isEmpty(self):
         return self.start is None
     
+    def displayValues(self):
+        pointer = self.start
+        # while pointer.next is not None:
+        #     print(pointer.data)
+        #     pointer.next = pointer
+        if pointer.next != None:
+            print(pointer.data)
+            pointer = pointer.next
+            
+        
+
+    
     def insertAtFirst(self, data):
         newNode = NodeBuild(data)
         if self.isEmpty():
@@ -200,7 +212,19 @@ class SinglyLinkedList:
         return f"added {data}"
 
         
-            
+    def insertAtLast(self, data):
+        newNode = NodeBuild(data)
+        pointer = self.start
+        # if pointer is None:
+        #     pointer.next = newNode
+        # pointer.next = pointer
+        # return f"added {data}"
+    
+        if pointer.next != None:
+            pointer = pointer.next
+        pointer.next = newNode
+        return f"added {data}"
+
     
 
 build = SinglyLinkedList()
@@ -208,6 +232,8 @@ build = SinglyLinkedList()
 print(build) # memory address for our linked list
 print(build.isEmpty()) #this fumction is to check whether the list is empty or not
 print(build.insertAtFirst(9))
+print(build.insertAtLast(10))
+print(build.displayValues())
 
 
 

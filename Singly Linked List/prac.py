@@ -205,15 +205,29 @@ class SinglyLinkedList:
     
     def insertAtFirst(self, data):
         newNode = NodeBuild(data)
+        
+        #if list is empty
         if self.isEmpty():
             self.start = newNode
-        newNode.next = self.start
-        self.start = newNode
+
+        #if several nodes exists
+        header = self.start
+        newNode.next = header.next
+        header = newNode
         return f"added {data}"
 
         
     def insertAtLast(self, data):
         newNode = NodeBuild(data)
+
+        #bas case if list is empty
+        if  self.isEmpty():
+            self.start = newNode
+
+        #but if we have multiple nodes in a list then
+        while self.start is not None:
+            print(self.start.data)
+            self.start = self.start.next
         
         
         
@@ -224,7 +238,11 @@ print(build) # memory address for our linked list
 print(build.isEmpty()) #this fumction is to check whether the list is empty or not
 print(build.insertAtFirst(9))
 print(build.insertAtFirst(10))
-print(build.insertAtLast(11))
+print(build.insertAtFirst(11))
+print(build.insertAtFirst(12))
+print(build.insertAtFirst(13))
+print(build.insertAtLast(14))
+print(build.insertAtLast(15))
 print(build.displayValues())
 
 

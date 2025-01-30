@@ -189,10 +189,26 @@ class SinglyLinkedList:
         self.start = start
 
     def isEmpty(self):
-        return self.start == None
+        return self.start is None
+    
+    def insertAtFirst(self, data):
+        newNode = NodeBuild(data)
+        if self.isEmpty():
+            self.start = newNode
+        newNode.next = self.start
+        self.start = newNode
+        return f"added {data}"
+
+        
+            
     
 
 build = SinglyLinkedList()
 
 print(build) # memory address for our linked list
-print(build.isEmpty())
+print(build.isEmpty()) #this fumction is to check whether the list is empty or not
+print(build.insertAtFirst(9))
+
+
+
+

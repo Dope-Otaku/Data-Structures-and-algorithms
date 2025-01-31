@@ -204,17 +204,28 @@ class SinglyLinkedList:
 
     
     def insertAtFirst(self, data):
-        newNode = NodeBuild(data)
-        
-        #if list is empty
+        #base case if there are no elements
         if self.isEmpty():
+            newNode = NodeBuild(data, self.start)
             self.start = newNode
+            return f'added at first {data}'
 
-        #if several nodes exists
-        header = self.start
-        newNode.next = header.next
-        header = newNode
-        return f"added {data}"
+
+
+
+
+
+
+
+        #if list is empty
+        # if self.isEmpty():
+        #     self.start = newNode
+
+        # #if several nodes exists
+        # header = self.start
+        # newNode.next = header.next
+        # header = newNode
+        # return f"added {data}"
 
         
     def insertAtLast(self, data):

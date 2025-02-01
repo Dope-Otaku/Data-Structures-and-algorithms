@@ -211,6 +211,12 @@ class SinglyLinkedList:
             return f'added at first {data}'
 
 
+        #debugging
+        if not self.isEmpty():
+            return f"linked list unable to added the number  {data}"
+
+
+
 
 
 

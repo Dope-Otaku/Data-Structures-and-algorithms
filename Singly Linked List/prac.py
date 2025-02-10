@@ -246,8 +246,7 @@ class SinglyLinkedList:
             print(self.start.data)
             self.start = self.start.next
         
-        
-        
+# here we go again 
 
 build = SinglyLinkedList()
 

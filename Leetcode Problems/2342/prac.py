@@ -22,6 +22,13 @@ def maxSum(x):
 
     for value in x:
         digitSum = internalAdder(value)
-        print(digitSum)
+        # print(digitSum) #debugger
+
+        if digitSum in numberMap:
+            maxSum = max(maxSum, numberMap[digitSum]+value)
+            numberMap[digitSum] = value
+        else:
+            numberMap[digitSum] = value
+    return maxSum
 
 print(maxSum(x))

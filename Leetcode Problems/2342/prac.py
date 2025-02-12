@@ -17,13 +17,11 @@ def internalAdder(nums):
 
 
 def maxSum(x):
-    newList = []
-    i = x[0]
+    numberMap = {}
+    maxSum = -1
 
-q =str(12)
-print(internalAdder(q))
+    for value in x:
+        digitSum = internalAdder(value)
+        print(digitSum)
 
-
-l = 19
-p = [int(i) for i in str(l)]
-print(p)
+print(maxSum(x))

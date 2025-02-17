@@ -59,7 +59,16 @@ class SLL:
             print(temp.data, end=' ')
             temp = temp.next
 
-
+    def insertAfter(self, item, data):
+        temp = self.start
+        newNode = Node(data)
+        while temp is not None:
+            print(temp.data)
+            if temp.data == item:
+                newNode.next = temp.next
+                temp.next = newNode #problem solved
+                return f"inserted after {item}"
+            temp = temp.next
 
 
 
@@ -72,5 +81,6 @@ print(myList.insertFront(1))
 print(myList.insertFront(2))
 # print(myList.currentPointer())
 print(myList.insertLast(3))
+print(myList.insertAfter(3,4))
 print(myList.search(4))
 print(myList.traverse())

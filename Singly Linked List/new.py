@@ -13,6 +13,13 @@ class SLL:
     def isEmpty(self):
         return self.start == None
 
+    # new peek view function added for debugging
+    def currentPointer(self):
+        if self.start is None:
+            return f"the list is empty"
+        else:
+            return self.start.data
+
     def insertFront(self, item):
 
         #new node creation
@@ -31,3 +38,4 @@ myList = SLL()
 print(myList.isEmpty())
 print(myList.insertFront(1))
 print(myList.insertFront(2))
+print(myList.currentPointer())

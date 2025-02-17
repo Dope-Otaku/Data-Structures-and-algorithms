@@ -38,6 +38,20 @@ class SLL:
         else:
             self.start = newNode
         
+    def search(self, item):
+        if not self.isEmpty():
+            temp = self.start
+            while temp.next is not None:
+                if temp.data == item:
+                    return f"data:{item} found at {temp}"
+                temp =temp.next
+            if temp.data == item:
+                return f"data:{item} found at {temp}"
+            else:
+                return f"Data:{item} not available in list"
+        else:
+            return f"list is empty"
+
 
     # def traverse(self):
     #     temp = self.start
@@ -59,3 +73,4 @@ print(myList.insertFront(2))
 # print(myList.currentPointer())
 print(myList.insertLast(3))
 # print(myList.traverse())
+print(myList.search(4))

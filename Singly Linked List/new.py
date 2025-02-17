@@ -70,6 +70,9 @@ class SLL:
                 return f"inserted after {item}"
             temp = temp.next
 
+    def deleteFirst(self):
+        if not self.isEmpty():
+            self.start = self.start.next
 
 
 
@@ -84,3 +87,6 @@ print(myList.insertLast(3))
 print(myList.insertAfter(3,4))
 print(myList.search(4))
 print(myList.traverse())
+print(myList.deleteFirst())
+print(myList.traverse())
+

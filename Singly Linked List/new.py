@@ -74,6 +74,18 @@ class SLL:
         if not self.isEmpty():
             self.start = self.start.next
 
+    def deleteLast(self):
+        if self.start == None:
+            return -1
+
+        elif self.start.next == None:
+            self.start = None
+        if not self.isEmpty():
+            temp = self.start
+            while temp.next.next is not None:
+                    temp = temp.next
+            temp.next = None
+                
 
 
 #drivers code
@@ -81,12 +93,14 @@ myList = SLL()
 
 print(myList.isEmpty())
 print(myList.insertFront(1))
-print(myList.insertFront(2))
+# print(myList.insertFront(2))
 # print(myList.currentPointer())
-print(myList.insertLast(3))
-print(myList.insertAfter(3,4))
+# print(myList.insertLast(3))
+# print(myList.insertAfter(3,4))
 print(myList.search(4))
 print(myList.traverse())
-print(myList.deleteFirst())
+# print(myList.deleteFirst())
+print(myList.deleteLast())
 print(myList.traverse())
+
 

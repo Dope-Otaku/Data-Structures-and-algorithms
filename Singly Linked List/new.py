@@ -13,6 +13,17 @@ class SLL:
     def isEmpty(self):
         return self.start == None
 
+    def insertFront(self, item):
+
+        #new node creation
+        newNode = Node(item)
+
+
+        #1st case if list empty
+        if self.isEmpty():
+            self.start = newNode
+            return f"New List created with {item}"
+
 
 
 
@@ -21,3 +32,5 @@ class SLL:
 myList = SLL()
 
 print(myList.isEmpty())
+print(myList.insertFront(1))
+print(myList.insertFront(2))

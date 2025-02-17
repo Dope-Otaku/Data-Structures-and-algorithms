@@ -27,6 +27,24 @@ class SLL:
         self.start = newNode
         return f"New List created with {item}"
 
+    def insertLast(self, item):
+        newNode = Node(item)
+        if not self.isEmpty():
+            head = self.start
+            while head.next != None:
+                head  = head.next
+            head.next = newNode
+            return f"added  {item}"
+        else:
+            self.start = newNode
+        
+
+    # def traverse(self):
+    #     temp = self.start
+    #     while temp.next is not None:
+    #         print(self.start.data)
+    #         temp = temp.next
+
 
 
 
@@ -38,4 +56,6 @@ myList = SLL()
 print(myList.isEmpty())
 print(myList.insertFront(1))
 print(myList.insertFront(2))
-print(myList.currentPointer())
+# print(myList.currentPointer())
+print(myList.insertLast(3))
+# print(myList.traverse())

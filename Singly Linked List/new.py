@@ -53,11 +53,11 @@ class SLL:
             return f"list is empty"
 
 
-    # def traverse(self):
-    #     temp = self.start
-    #     while temp.next is not None:
-    #         print(self.start.data)
-    #         temp = temp.next
+    def traverse(self):
+        temp = self.start
+        while temp is not None:
+            print(temp.data, end=' ')
+            temp = temp.next
 
 
 
@@ -72,5 +72,5 @@ print(myList.insertFront(1))
 print(myList.insertFront(2))
 # print(myList.currentPointer())
 print(myList.insertLast(3))
-# print(myList.traverse())
 print(myList.search(4))
+print(myList.traverse())

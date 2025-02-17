@@ -101,9 +101,26 @@ class SLL:
                 while temp.next is not None:
                     if temp.next.data == item:
                         temp.next = temp.next.next
+                        break
                     temp = temp.next
 
 
+    def __iter__(self):
+        return SLLIterator(self.start)
+
+class SLLIterator():
+    def __init__(self, start):
+        self.current = start
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if not self.current:
+            raise StopIteration
+        dataTemp = self.current.data
+        self.current = self.current.next
+        return dataTemp
 
 
 
@@ -122,5 +139,8 @@ print(myList.traverse())
 # print(myList.deleteLast())
 print(myList.deleteItem(3))
 print(myList.traverse())
+
+for x in myList:
+    print(x, end=' ')
 
 

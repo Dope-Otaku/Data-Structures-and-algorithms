@@ -16,13 +16,10 @@ class SLL:
     def insertFront(self, item):
 
         #new node creation
-        newNode = Node(item)
+        newNode = Node(item, self.start)
+        self.start = newNode
+        return f"New List created with {item}"
 
-
-        #1st case if list empty
-        if self.isEmpty():
-            self.start = newNode
-            return f"New List created with {item}"
 
 
 

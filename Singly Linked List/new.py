@@ -86,6 +86,25 @@ class SLL:
                     temp = temp.next
             temp.next = None
                 
+    def deleteItem(self, item):
+        if self.start == None:
+            return -1
+
+        elif self.start.next == None and self.start.data == data:
+            self.start = None
+        
+        else:
+            temp = self.start
+            if temp.data == item:
+                self.start = temp.next
+            else:
+                while temp.next is not None:
+                    if temp.next.data == item:
+                        temp.next = temp.next.next
+                    temp = temp.next
+
+
+
 
 
 #drivers code
@@ -93,14 +112,15 @@ myList = SLL()
 
 print(myList.isEmpty())
 print(myList.insertFront(1))
-# print(myList.insertFront(2))
-# print(myList.currentPointer())
-# print(myList.insertLast(3))
-# print(myList.insertAfter(3,4))
+print(myList.insertFront(2))
+print(myList.currentPointer())
+print(myList.insertLast(3))
+print(myList.insertAfter(3,4))
 print(myList.search(4))
 print(myList.traverse())
 # print(myList.deleteFirst())
-print(myList.deleteLast())
+# print(myList.deleteLast())
+print(myList.deleteItem(3))
 print(myList.traverse())
 
 

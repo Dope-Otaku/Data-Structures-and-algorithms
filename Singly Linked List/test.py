@@ -21,13 +21,13 @@ class SLL():
 
     def insertFront(self, item):
         newNode = Node(item)
-        if not isEmpty():
+        if not self.isEmpty():
             newNode.next = self.start
         self.start = newNode
 
     def insertLast(self, item):
         newNode = Node(item)
-        if isEmpty():
+        if self.isEmpty():
             self.start = newNode
         temp = self.start
         while temp.next is not None:
@@ -39,7 +39,7 @@ class SLL():
         if self.start.data == data:
             self.start.next = newNode
             return 
-        if not isEmpty():
+        if not self.isEmpty():
             temp = self.start
             while temp is not None:
                 if temp.data == data:
@@ -49,7 +49,7 @@ class SLL():
                 temp = temp.next
 
     def search(self, item):
-        if not isEmpty():
+        if not self.isEmpty():
             temp = self.start
             while temp is not None:
                 if temp.data == item:
@@ -107,3 +107,5 @@ class SLLIterator():
 #driver code
 
 myList = SLL()
+
+print(myList.insertFront(1))

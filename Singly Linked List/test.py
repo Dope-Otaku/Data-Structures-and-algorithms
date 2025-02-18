@@ -13,6 +13,11 @@ class SLL():
     def iterator(self):
         return SLLIterator(self.start)
     
+    def printAll(self):
+        temp = self.start
+        while temp is not None:
+            print(temp)
+            temp = temp.next
 
 
 class SLLIterator():

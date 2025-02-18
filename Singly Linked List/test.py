@@ -78,8 +78,15 @@ class SLL():
                 temp = temp.next
             temp.next = None
 
-    
-
+    def deleteItem(self, item):
+        if not self.isEmpty():
+            temp = self.start
+            while temp is not None:
+                if temp.next.data == item:
+                    temp.next = temp.next.next
+                    break
+                temp = temp.next
+                    
 class SLLIterator():
     def __init__(self):
         self.current = current

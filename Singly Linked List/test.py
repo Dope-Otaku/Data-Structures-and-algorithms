@@ -10,4 +10,20 @@ class SLL():
     def isEmpty(self):
         return self.start==None
 
+    def iterator(self):
+        return SLLIterator(self.start)
     
+
+
+class SLLIterator():
+    def __init__(self):
+        self.current = current
+
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if not self.current:
+            raise StopIteration
+        tempData = self.current.data
+        self.current = self.current.next

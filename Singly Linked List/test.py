@@ -10,19 +10,17 @@ class SLL():
     def isEmpty(self):
         return self.start==None
 
-    def iterator(self):
+    def __iter__(self):
         return SLLIterator(self.start)
     
     def printAll(self):
         temp = self.start
         while temp is not None:
-            print(temp)
+            print(temp.data, end=' ')
             temp = temp.next
 
     def insertFront(self, item):
-        newNode = Node(item)
-        if not self.isEmpty():
-            newNode.next = self.start
+        newNode = Node(item, self.start)
         self.start = newNode
 
     def insertLast(self, item):
@@ -35,18 +33,18 @@ class SLL():
         temp.next = newNode
         
     def insertItem(self, item , data):
-        newNode = Node(item)
-        if self.start.data == data:
-            self.start.next = newNode
-            return 
-        if not self.isEmpty():
-            temp = self.start
-            while temp is not None:
-                if temp.data == data:
-                    newNode.next = temp.next
-                    temp.next = newNode
-                    break
-                temp = temp.next
+        newNode = Node(data)
+        # if self.start.data == data:
+        #     self.start.next = newNode
+        #     return 
+        # if not self.isEmpty():
+        temp = self.start
+        while temp is not None:
+            if temp.data == item:
+                newNode.next = temp.next
+                temp.next = newNode
+                break
+            temp = temp.next
 
     def search(self, item):
         if not self.isEmpty():
@@ -88,8 +86,8 @@ class SLL():
                 temp = temp.next
                     
 class SLLIterator():
-    def __init__(self):
-        self.current = current
+    def __init__(self, start):
+        self.current = start
 
     def __iter__(self):
         return self
@@ -99,6 +97,7 @@ class SLLIterator():
             raise StopIteration
         tempData = self.current.data
         self.current = self.current.next
+        return tempData
 
 
 
@@ -109,3 +108,14 @@ class SLLIterator():
 myList = SLL()
 
 print(myList.insertFront(1))
+print(myList.insertFront(2))
+print(myList.insertLast(3))
+print(myList.insertLast(5))
+print(myList.insertItem(2,4))
+print(myList.search(4))
+print(myList.printAll())
+print(myList.deleteFirst())
+print(myList.deleteLast())
+print(myList.deleteItem(1))
+for i in myList:
+    print(i, end=' ')

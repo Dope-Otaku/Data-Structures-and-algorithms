@@ -24,6 +24,15 @@ class SLL():
         if not isEmpty():
             newNode.next = self.start
         self.start = newNode
+
+    def insertLast(self, item):
+        newNode = Node(item)
+        if isEmpty():
+            self.start = newNode
+        temp = self.start
+        while temp.next is not None:
+            temp = temp.next
+        temp.next = newNode
         
 
 class SLLIterator():
@@ -38,3 +47,11 @@ class SLLIterator():
             raise StopIteration
         tempData = self.current.data
         self.current = self.current.next
+
+
+
+
+
+#driver code
+
+myList = SLL()

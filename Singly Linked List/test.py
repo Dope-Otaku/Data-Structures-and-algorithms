@@ -48,6 +48,16 @@ class SLL():
                     break
                 temp = temp.next
 
+    def search(self, item):
+        if not isEmpty():
+            temp = self.start
+            while temp is not None:
+                if temp.data == item:
+                    return f"item found"
+                temp =temp.next
+        else:
+            return f"list empty"
+
 class SLLIterator():
     def __init__(self):
         self.current = current

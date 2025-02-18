@@ -34,6 +34,19 @@ class SLL():
             temp = temp.next
         temp.next = newNode
         
+    def insertItem(self, item , data):
+        newNode = Node(item)
+        if self.start.data == data:
+            self.start.next = newNode
+            return 
+        if not isEmpty():
+            temp = self.start
+            while temp is not None:
+                if temp.data == data:
+                    newNode.next = temp.next
+                    temp.next = newNode
+                    break
+                temp = temp.next
 
 class SLLIterator():
     def __init__(self):

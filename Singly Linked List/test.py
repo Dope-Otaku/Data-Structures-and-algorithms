@@ -67,7 +67,18 @@ class SLL():
             temp = self.start
             self.start = temp.next
 
-    def 
+    def deleteLast(self):
+        if self.start == None:
+            return -1
+        elif self.start.next == None:
+            self.start = None
+        else:
+            temp = self.start
+            while temp.next is not None:
+                temp = temp.next
+            temp.next = None
+
+    
 
 class SLLIterator():
     def __init__(self):

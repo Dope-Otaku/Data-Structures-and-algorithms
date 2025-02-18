@@ -19,6 +19,12 @@ class SLL():
             print(temp)
             temp = temp.next
 
+    def insertFront(self, item):
+        newNode = Node(item)
+        if not isEmpty():
+            newNode.next = self.start
+        self.start = newNode
+        
 
 class SLLIterator():
     def __init__(self):

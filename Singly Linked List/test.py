@@ -58,6 +58,17 @@ class SLL():
         else:
             return f"list empty"
 
+    def deleteFirst(self):
+        if self.start == None:
+            return -1
+        elif self.start.next == None:
+            self.start = None
+        else:
+            temp = self.start
+            self.start = temp.next
+
+    def 
+
 class SLLIterator():
     def __init__(self):
         self.current = current

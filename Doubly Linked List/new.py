@@ -15,7 +15,12 @@ class DLL:
         return self.start == None
 
 
-
+    def insert_first(self, data):
+        newNode = Node(None,self.start, data)
+        # print(newNode.data)
+        if self.is_empty():
+            self.start = newNode
+        self.start.prev = newNode
 
 
 
@@ -24,3 +29,5 @@ class DLL:
 myList = DLL()
 
 print(myList.is_empty())
+print(myList.insert_first(1))
+

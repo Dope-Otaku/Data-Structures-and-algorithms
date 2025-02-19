@@ -67,10 +67,23 @@ class DLL:
                 temp.next = newNode
                 newNode.prev = temp
             temp = temp.next
+
+    def __iter__(self):
+        return DLLIterator(self.start)
         
 
 
-
+class DLLIterator:
+    def __init__(self, start):
+        self.current = start
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if not self.current:
+            raise StopIteration
+        tempData = self.current.data
+        self.current = self.current.next
+        return tempData
 
 #driver code
 
@@ -86,4 +99,6 @@ print(myList.insert_after(6, 5))
 print(myList.insert_after(5.5, 5))
 print(myList.search(4))
 print(myList.printAll())
+for x in myList:
+    print(x, end=' ')
 

@@ -82,7 +82,16 @@ class DLL:
             self.start = temp
 
     def delete_last(self):
-        pass
+        if self.start == None:
+            return -1
+        if self.start.next is None:
+            self.start = None
+        temp = self.start
+        while temp is not None:
+            if temp.next.next == None:
+                temp.next.prev = None        
+                temp.next = None
+            temp = temp.next
         
 
 
@@ -112,7 +121,8 @@ print(myList.insert_after(6, 5))
 print(myList.insert_after(5.5, 5))
 print(myList.search(4))
 print(myList.printAll())
-print(myList.delete_first())
+# print(myList.delete_first())
+print(myList.delete_last())
 for x in myList:
     print(x, end=' ')
 

@@ -43,7 +43,22 @@ class DLL:
         newNode.prev = temp
         temp.next = newNode
         print(f"added in the last list {data}")
-            
+
+    def insert_after(self, data, after):
+        if self.start == None:
+            return -1
+        newNode = Node(data = data)
+        temp = self.start
+        while temp is not None:
+            if temp.data == after and temp.next == None:
+                temp.next = newNode
+                newNode.prev = temp
+            elif temp.data == after:
+                temp.next.prev = newNode
+                newNode.next = temp.next
+                temp.next = newNode
+                newNode.prev = temp
+            temp = temp.next
         
 
 
@@ -59,5 +74,7 @@ print(myList.insert_first(3))
 print(myList.insert_first(2))
 print(myList.insert_first(1))
 print(myList.insert_last(5))
+print(myList.insert_after(6, 5))
+print(myList.insert_after(5.5, 5))
 print(myList.printAll())
 

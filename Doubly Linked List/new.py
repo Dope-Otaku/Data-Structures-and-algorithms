@@ -10,6 +10,9 @@ class Node:
 class DLL:
     def __init__(self, start=None):
         self.start = start
+    
+    def __iter__(self):
+        return DLLIterator(self.start)
 
     def is_empty(self):
         return self.start == None
@@ -68,8 +71,13 @@ class DLL:
                 newNode.prev = temp
             temp = temp.next
 
-    def __iter__(self):
-        return DLLIterator(self.start)
+    def delete_first(self):
+        if self.start == None:
+            return -1
+        if not self.is_empty():
+            temp = self.start.next
+            temp.prev = None
+            self.start = temp
         
 
 
@@ -99,6 +107,7 @@ print(myList.insert_after(6, 5))
 print(myList.insert_after(5.5, 5))
 print(myList.search(4))
 print(myList.printAll())
+print(myList.delete_first())
 for x in myList:
     print(x, end=' ')
 

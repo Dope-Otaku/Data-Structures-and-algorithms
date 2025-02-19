@@ -21,6 +21,14 @@ class DLL:
                 print(temp.data, end = ' ')
                 temp = temp.next
 
+    def search(self, item):
+        temp = self.start
+        while temp is not None:
+            if temp.data == item:
+                print(f"found the item {item}")
+                break
+            temp = temp.next
+
 
 
     def insert_first(self, data):
@@ -76,5 +84,6 @@ print(myList.insert_first(1))
 print(myList.insert_last(5))
 print(myList.insert_after(6, 5))
 print(myList.insert_after(5.5, 5))
+print(myList.search(4))
 print(myList.printAll())
 

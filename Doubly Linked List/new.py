@@ -22,6 +22,17 @@ class DLL:
             self.start = newNode
         self.start.prev = newNode
 
+    def insert_last(self, data):
+        newNode = Node(None, None, data)
+        if not self.is_empty():
+            temp = self.start
+            while temp is not None:
+                temp = temp.next
+            temp.next = newNode
+            newNode.prev = temp
+        self.start = newNode
+
+
 
 
 #driver code

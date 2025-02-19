@@ -9,6 +9,18 @@ class Node:
 
 class DLL:
     def __init__(self):
-        self.start = start
+        self.start = None
 
-    
+    def is_empty(self):
+        return self.start == None
+
+
+
+
+
+
+#driver code
+
+myList = DLL()
+
+print(myList.is_empty())

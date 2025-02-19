@@ -75,9 +75,14 @@ class DLL:
         if self.start == None:
             return -1
         if not self.is_empty():
+            if self.start.next is None:
+                self.start = None
             temp = self.start.next
             temp.prev = None
             self.start = temp
+
+    def delete_last(self):
+        pass
         
 
 

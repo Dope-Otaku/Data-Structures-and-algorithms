@@ -92,7 +92,15 @@ class DLL:
                 temp.next.prev = None        
                 temp.next = None
             temp = temp.next
-        
+
+    def delete_after(self, after):
+        if self.start == None:
+            return -1
+        temp = self.start
+        while temp is not None:
+            if temp.data == after:
+                print("hello")
+            temp = temp.next
 
 
 class DLLIterator:

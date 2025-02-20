@@ -109,7 +109,14 @@ class SLL:
         return SLLIterator(self.start)
 
     def reverseList(self):
-        pass
+        listo = []
+        temp = self.start
+        while temp is not None:
+            listo.append(temp.data)
+            temp = temp.next
+        for i in reversed(listo):
+            print(i)
+        # return revList
 
 class SLLIterator():
     def __init__(self, start):
@@ -142,8 +149,8 @@ print(myList.traverse())
 # print(myList.deleteLast())
 print(myList.deleteItem(3))
 print(myList.traverse())
+# print(myList.reverseList())
 
-for x in myList:
-    print(x, end=' ')
-
+# for x in myList:
+#     print(x, end=' ')
 

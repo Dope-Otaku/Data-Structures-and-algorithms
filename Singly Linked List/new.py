@@ -108,6 +108,9 @@ class SLL:
     def __iter__(self):
         return SLLIterator(self.start)
 
+    def reverseList(self):
+        pass
+
 class SLLIterator():
     def __init__(self, start):
         self.current = start

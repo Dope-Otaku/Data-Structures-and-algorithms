@@ -108,6 +108,16 @@ class SLL:
     def __iter__(self):
         return SLLIterator(self.start)
 
+    def OptimizedReverse(self):
+        prev = None
+        temp = self.start
+        while temp is not None:
+            nexto = temp.next
+            temp.next = prev
+            prev = temp
+            temp = nexto 
+        return prev.data
+
     def reverseList(self):
         listo = []
         temp = self.start
@@ -150,6 +160,7 @@ print(myList.traverse())
 print(myList.deleteItem(3))
 print(myList.traverse())
 print(myList.reverseList())
+print(myList.OptimizedReverse())
 
 # for x in myList:
 #     print(x, end=' ')

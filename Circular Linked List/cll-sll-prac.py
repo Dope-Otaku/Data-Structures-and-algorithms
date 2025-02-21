@@ -11,6 +11,9 @@ class CLL:
     def __init__(self, start=None):
         self.start = start
 
+    def __iter__(self):
+        return CLLIterator(self.start)
+
     def isEmpty(self):
         return self.start == None
 
@@ -27,7 +30,19 @@ class CLL:
         self.start = newNode
 
 
+class CLLIterator:
+    def __init__(self, start):
+        self.current = start
 
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if not self.current:
+            raise StopIteration
+        tempData = self.current.data
+        self.current = self.current.next
+        return tempData
 
 
 
@@ -38,4 +53,10 @@ myList = CLL()
 print(myList.isEmpty())
 print(myList.insertFront(1))
 print(myList.insertFront(2))
-print(myList.travserse())
+# print(myList.travserse())
+
+
+# iterator
+
+for x in myList:
+    print(x, end=' ')

@@ -1,9 +1,9 @@
 '''
-in this we will practise circular singly linked list
+in this we will practise circular Doubly linked list
 '''
 class Node:
-    def __init__(self, prev=None, data=None, next= None):
-        self.prev = prev
+    def __init__(self, data=None, next= None):
+
         self.data = data
         self.next = next
 
@@ -28,6 +28,10 @@ class CLL:
         if not self.isEmpty():
             self.start = newNode
         self.start = newNode
+
+    def insertLast(self, item):
+        pass
+
 
 
 class CLLIterator:

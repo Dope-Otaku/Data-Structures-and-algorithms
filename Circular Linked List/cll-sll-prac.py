@@ -14,6 +14,12 @@ class CLL:
     def isEmpty(self):
         return self.start == None
 
+    def insertFront(self, item):
+        newNode = Node(data = item, next = self.start)
+        if not self.isEmpty():
+            self.start = newNode
+        self.start = newNode
+
 
 
 
@@ -24,3 +30,4 @@ class CLL:
 myList = CLL()
 
 print(myList.isEmpty())
+print(myList.insertFront(1))

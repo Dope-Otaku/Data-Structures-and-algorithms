@@ -24,10 +24,13 @@ class CLL:
             temp = temp.next
 
     def insertFront(self, item):
-        newNode = Node(data = item, next = self.start)
-        if not self.isEmpty():
-            self.start = newNode
-        self.start = newNode
+        # newNode = Node(data = item, next = self.start)
+        # if not self.isEmpty():
+        #     self.start = newNode
+        # self.start = newNode
+
+
+        # the logic needs to be imiplemented new
 
     def insertLast(self, item):
         newNode = Node(data = item, next= self.start)

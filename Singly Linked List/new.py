@@ -111,12 +111,13 @@ class SLL:
     def OptimizedReverse(self):
         prev = None
         temp = self.start
-        while temp is not None:
-            nexto = temp.next
+        while temp:
+            nextNode = temp.next
             temp.next = prev
             prev = temp
-            temp = nexto 
-        return prev.data
+            temp = nextNode 
+        self.start = prev  #this line solved the problem can anyone help me in this ?
+        self.traverse()
 
     def reverseList(self):
         listo = []

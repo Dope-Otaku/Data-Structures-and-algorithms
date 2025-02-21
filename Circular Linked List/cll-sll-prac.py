@@ -10,3 +10,6 @@ class Node:
 class CLL:
     def __init__(self, start=None):
         self.start = start
+
+    def isEmpty(self):
+        return self.start == None

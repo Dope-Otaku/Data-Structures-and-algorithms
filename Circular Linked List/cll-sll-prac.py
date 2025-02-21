@@ -30,7 +30,15 @@ class CLL:
         self.start = newNode
 
     def insertLast(self, item):
-        pass
+        newNode = Node(data = item, next= self.start)
+        temp = self.start
+        # if self.isEmpty():
+        #     self.start = newNode
+        while temp is not None:
+            if temp.next == self.start:
+                temp.next = newNode
+                print("hi")
+            temp = temp.next
 
 
 
@@ -57,7 +65,9 @@ myList = CLL()
 print(myList.isEmpty())
 print(myList.insertFront(1))
 print(myList.insertFront(2))
-# print(myList.travserse())
+print(myList.travserse())
+print(myList.insertLast(3))
+
 
 
 # iterator

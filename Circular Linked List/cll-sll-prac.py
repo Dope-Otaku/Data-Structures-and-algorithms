@@ -13,3 +13,14 @@ class CLL:
 
     def isEmpty(self):
         return self.start == None
+
+
+
+
+
+
+# drivers code
+
+myList = CLL()
+
+print(myList.isEmpty())

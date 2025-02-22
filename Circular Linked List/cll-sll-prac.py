@@ -8,17 +8,17 @@ class Node:
         self.next = next
 
 class CLL:
-    def __init__(self, start=None):
-        self.start = start
+    def __init__(self, last=None):
+        self.last = last
 
     def __iter__(self):
-        return CLLIterator(self.start)
+        return CLLIterator(self.last)
 
     def isEmpty(self):
-        return self.start == None
+        return self.last == None
 
     def travserse(self):
-        temp = self.start
+        temp = self.last
         while temp is not None:
             print(temp.data, end=' ')
             temp = temp.next
@@ -26,25 +26,25 @@ class CLL:
     def insertFront(self, item):
         newNode = Node(data = item)
         # if not self.isEmpty():
-        #     self.start = newNode
-        # self.start = newNode
+        #     self.last = newNode
+        # self.last = newNode
 
 
         # the logic needs to be imiplemented new
-        if self.start == None:
-            self.start = newNode
-            newNode.next = self.start
+        if self.last == None:
+            self.last = newNode
+            newNode.next = self.last
         if not self.isEmpty():
-            newNode.next = self.start #it breaks here
-            self.start = newNode
+            newNode.next = self.last #it breaks here
+            self.last = newNode
 
     def insertLast(self, item): #this function is obsolete
-        newNode = Node(data = item, next= self.start)
-        temp = self.start
+        newNode = Node(data = item, next= self.last)
+        temp = self.last
         # if self.isEmpty():
-        #     self.start = newNode
+        #     self.last = newNode
         while temp is not None:
-            if temp.next == self.start:
+            if temp.next == self.last:
                 temp.next = newNode
                 print("hi")
             temp = temp.next
@@ -52,8 +52,8 @@ class CLL:
 
 
 class CLLIterator:
-    def __init__(self, start):
-        self.current = start
+    def __init__(self, last):
+        self.current = last
 
     def __iter__(self):
         return self
@@ -71,10 +71,10 @@ class CLLIterator:
 
 myList = CLL()
 
-print(myList.isEmpty())
 print(myList.insertFront(1))
 print(myList.insertFront(2))
-print(myList.travserse())
+print(myList.isEmpty())
+# print(myList.travserse())
 # print(myList.insertLast(3))
 
 

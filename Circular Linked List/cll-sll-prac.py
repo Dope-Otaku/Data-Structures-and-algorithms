@@ -38,7 +38,7 @@ class CLL:
             newNode.next = self.start #it breaks here
             self.start = newNode
 
-    def insertLast(self, item):
+    def insertLast(self, item): #this function is obsolete
         newNode = Node(data = item, next= self.start)
         temp = self.start
         # if self.isEmpty():

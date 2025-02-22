@@ -78,10 +78,12 @@ class CLL:
             temp = self.last
             while temp is not None:
                 if temp.data == after:
-                    if temp = self.last:
+                    if temp == self.last:
                         self.deleteLast()
                         break
-                    
+                    temp.next = temp.next.next
+                    break
+                temp = temp.next
 
 class CLLIterator:
     def __init__(self, last):
@@ -113,6 +115,7 @@ print(myList.insertLast(6))
 print(myList.insertAfter(4,7))
 # print(myList.deleteFront())
 print(myList.deleteLast())
+print(myList.deleteAfter(5))
 # print(myList.isEmpty())
 print(myList.travserse())
 

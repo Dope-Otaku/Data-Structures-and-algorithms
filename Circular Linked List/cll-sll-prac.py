@@ -45,6 +45,13 @@ class CLL:
             newNode.next = self.last.next
             self.last.next = newNode
             self.last = newNode
+
+    def insertAfter(self, after, item):
+        newNode = Node(data = item)
+        if not self.isEmpty():
+            temp = self.last
+            while temp is not None:
+                pass
         
 
 

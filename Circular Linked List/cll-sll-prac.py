@@ -26,6 +26,18 @@ class CLL:
                 break
             temp = temp.next
 
+    def search(self, value):
+        if not self.isEmpty():
+            temp = self.last
+            while temp is not None:
+                if temp.data == value:
+                    return f"value:- {temp.data} found at {temp}"
+                    # break
+                elif temp.next == self.last:
+                    break
+                temp = temp.next
+        return f"list empty"
+
     def insertFront(self, item):
         newNode = Node(data = item)
         if self.isEmpty():
@@ -123,6 +135,7 @@ print(myList.insertAfter(4,7))
 # print(myList.deleteLast())
 # print(myList.deleteAfter(5))
 # print(myList.isEmpty())
+print(myList.search(3))
 print(myList.travserse())
 
 

@@ -88,6 +88,8 @@ class CLL:
 class CLLIterator:
     def __init__(self, last):
         self.current = last
+        self.temp = last
+        self.count = 0
 
     def __iter__(self):
         return self
@@ -96,6 +98,10 @@ class CLLIterator:
         if not self.current:
             raise StopIteration
         tempData = self.current.data
+        if self.current == self.temp and self.count==1:
+            raise StopIteration
+        else:
+            self.count = 1
         self.current = self.current.next
         return tempData
 
@@ -114,8 +120,8 @@ print(myList.insertLast(5))
 print(myList.insertLast(6))
 print(myList.insertAfter(4,7))
 # print(myList.deleteFront())
-print(myList.deleteLast())
-print(myList.deleteAfter(5))
+# print(myList.deleteLast())
+# print(myList.deleteAfter(5))
 # print(myList.isEmpty())
 print(myList.travserse())
 
@@ -123,5 +129,5 @@ print(myList.travserse())
 
 # iterator
 
-# for x in myList:
-#     print(x, end=' ')
+for x in myList:
+    print(x, end=' ')

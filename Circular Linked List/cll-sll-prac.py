@@ -21,6 +21,8 @@ class CLL:
         temp = self.last
         while temp is not None:
             print(temp.data, end=' ')
+            if temp.next == self.last:
+                break
             temp = temp.next
 
     def insertFront(self, item):
@@ -70,8 +72,10 @@ myList = CLL()
 print(myList.isEmpty())
 print(myList.insertFront(1))
 print(myList.insertFront(2))
+print(myList.insertFront(3))
+print(myList.insertFront(4))
 print(myList.isEmpty())
-# print(myList.travserse())
+print(myList.travserse())
 # print(myList.insertLast(3))
 
 

@@ -73,6 +73,15 @@ class CLL:
                 break
             temp = temp.next
 
+    def deleteAfter(self, after):
+        if not self.isEmpty():
+            temp = self.last
+            while temp is not None:
+                if temp.data == after:
+                    if temp = self.last:
+                        self.deleteLast()
+                        break
+                    
 
 class CLLIterator:
     def __init__(self, last):

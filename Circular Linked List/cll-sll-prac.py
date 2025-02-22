@@ -55,7 +55,8 @@ class CLL:
                     if temp == self.last :
                         self.insertLast(item)
                         break
-                    self.insertFront(item)
+                    newNode.next = temp.next
+                    temp.next = newNode
                     break
                 temp = temp.next
         
@@ -89,7 +90,7 @@ print(myList.insertFront(3))
 print(myList.insertFront(4))
 print(myList.insertLast(5))
 print(myList.insertLast(6))
-print(myList.insertAfter(2,7))
+print(myList.insertAfter(4,7))
 # print(myList.isEmpty())
 print(myList.travserse())
 

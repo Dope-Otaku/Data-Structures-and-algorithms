@@ -25,18 +25,14 @@ class CLL:
 
     def insertFront(self, item):
         newNode = Node(data = item)
-        # if not self.isEmpty():
-        #     self.last = newNode
-        # self.last = newNode
-
-
-        # the logic needs to be imiplemented new
-        if self.last == None:
+        if self.isEmpty():
             self.last = newNode
+        elif self.last.next == None:
             newNode.next = self.last
-        if not self.isEmpty():
-            newNode.next = self.last #it breaks here
-            self.last = newNode
+            self.last.next = newNode
+        else:
+            newNode.next = self.last.next
+            self.last.next = newNode
 
     def insertLast(self, item): #this function is obsolete
         newNode = Node(data = item, next= self.last)
@@ -71,6 +67,7 @@ class CLLIterator:
 
 myList = CLL()
 
+print(myList.isEmpty())
 print(myList.insertFront(1))
 print(myList.insertFront(2))
 print(myList.isEmpty())

@@ -35,7 +35,7 @@ class CLL:
             self.start = newNode
             newNode.next = self.start
         if not self.isEmpty():
-            newNode.next = self.start
+            newNode.next = self.start #it breaks here
             self.start = newNode
 
     def insertLast(self, item):

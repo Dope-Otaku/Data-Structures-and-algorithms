@@ -34,9 +34,9 @@ class CLL:
         if self.start == None:
             self.start = newNode
             newNode.next = self.start
-        temp = self.start
-        newNode.next = temp
-        self.start = newNode
+        if not self.isEmpty():
+            newNode.next = self.start
+            self.start = newNode
 
     def insertLast(self, item):
         newNode = Node(data = item, next= self.start)
@@ -81,5 +81,5 @@ print(myList.travserse())
 
 # iterator
 
-for x in myList:
-    print(x, end=' ')
+# for x in myList:
+#     print(x, end=' ')

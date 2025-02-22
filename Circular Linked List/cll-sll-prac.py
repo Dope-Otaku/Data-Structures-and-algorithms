@@ -29,7 +29,7 @@ class CLL:
     def insertFront(self, item):
         newNode = Node(data = item)
         if self.isEmpty():
-            self.last = newNode
+            self.last = newNode #add newNode.next = newNode
         elif self.last.next == None:
             newNode.next = self.last
             self.last.next = newNode
@@ -60,7 +60,9 @@ class CLL:
                     break
                 temp = temp.next
         
-
+    def deleteFront(self):
+        if not self.isEmpty():
+            self.last.next = self.last.next.next
 
 
 class CLLIterator:
@@ -83,7 +85,7 @@ class CLLIterator:
 
 myList = CLL()
 
-print(myList.isEmpty())
+# print(myList.isEmpty())
 print(myList.insertFront(1))
 print(myList.insertFront(2))
 print(myList.insertFront(3))
@@ -91,6 +93,7 @@ print(myList.insertFront(4))
 print(myList.insertLast(5))
 print(myList.insertLast(6))
 print(myList.insertAfter(4,7))
+print(myList.deleteFront())
 # print(myList.isEmpty())
 print(myList.travserse())
 

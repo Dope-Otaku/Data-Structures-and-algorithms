@@ -33,6 +33,10 @@ class CLL:
         # the logic needs to be imiplemented new
         if self.start == None:
             self.start = newNode
+            newNode.next = self.start
+        temp = self.start
+        newNode.next = temp
+        self.start = newNode
 
     def insertLast(self, item):
         newNode = Node(data = item, next= self.start)
@@ -71,7 +75,7 @@ print(myList.isEmpty())
 print(myList.insertFront(1))
 print(myList.insertFront(2))
 print(myList.travserse())
-print(myList.insertLast(3))
+# print(myList.insertLast(3))
 
 
 

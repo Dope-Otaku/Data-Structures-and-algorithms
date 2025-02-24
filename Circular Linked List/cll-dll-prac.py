@@ -20,5 +20,16 @@ class CLL:
 
     def isEmpty(self):
         return self.start == None
-        
 
+
+    def insertFront(self, item):
+        newNode = Node(data = item)
+        if not self.isEmpty():
+            newNode.next = self.start
+            temp = self.start
+            while temp.next is not None:
+                temp = temp.next
+            newNode.prev = temp.next
+            temp.next.next = newNode
+            self.start = newNode
+        self.start = newNode

@@ -46,7 +46,8 @@ class CLL:
             self.start = newNode
             newNode.prev.next = newNode
         
-
+    def insertLast(self, item):
+        newNode = Node(data = item)
 
 # driver's code
 

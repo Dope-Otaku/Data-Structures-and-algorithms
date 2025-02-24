@@ -21,6 +21,15 @@ class CLL:
     def isEmpty(self):
         return self.start == None
 
+    def traverse(self): #basically printing all values
+        if not self.isEmpty():
+            temp = self.start
+            while temp is not None:
+                if temp.next == self.start:
+                    print(temp.data)
+                    break
+                temp = temp.next
+
 
     def insertFront(self, item):
         newNode = Node(data = item)

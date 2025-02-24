@@ -32,17 +32,20 @@ class CLL:
 
     def insertFront(self, item):
         newNode = Node(data = item)
-        if not self.isEmpty():
+        if self.start == None:
+            self.start = newNode        
+        elif self.start.next == None:
             newNode.next = self.start
-            temp = self.start
-            while temp is not None:
-                if temp.next == None:
-                    temp.next = newNode
-                temp = temp.next
-            newNode.prev = temp
-            # temp.next = newNode
+            self.start.next = newNode
+            newNode.prev = self.start
             self.start = newNode
-        self.start = newNode
+        else:
+            newNode.next = self.start
+            newNode.prev = self.start.prev
+            self.start.prev = newNode
+            self.start = newNode
+            newNode.prev.next = newNode
+        
 
 
 # driver's code
@@ -51,7 +54,7 @@ myList = CLL()
 
 # print(myList.insertFront(5))
 # print(myList.insertFront(4))
-# print(myList.insertFront(3))
-# print(myList.insertFront(2))
+print(myList.insertFront(3))
+print(myList.insertFront(2))
 print(myList.insertFront(1))
 print(myList.traverse())

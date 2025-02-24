@@ -42,3 +42,15 @@ class CLL:
             temp.next.next = newNode
             self.start = newNode
         self.start = newNode
+
+
+# driver's code
+
+myList = CLL()
+
+print(myList.insertFront(5))
+print(myList.insertFront(4))
+print(myList.insertFront(3))
+print(myList.insertFront(2))
+print(myList.insertFront(1))
+print(myList.traverse())

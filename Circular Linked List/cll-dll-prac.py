@@ -22,13 +22,12 @@ class CLL:
         return self.start == None
 
     def traverse(self): #basically printing all values
-        if not self.isEmpty():
-            temp = self.start
-            while temp is not None:
-                if temp.next == self.start:
-                    print(temp.data)
-                    break
-                temp = temp.next
+        temp = self.start
+        while temp is not None:
+            print(temp.data, end =" ")
+            if temp.next == self.start:
+                break
+            temp = temp.next
 
 
     def insertFront(self, item):

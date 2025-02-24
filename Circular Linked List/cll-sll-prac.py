@@ -1,5 +1,5 @@
 '''
-in this we will practise circular Doubly linked list and imp point to remember we will start
+in this we will practise circular Singly linked list and imp point to remember we will start
 traversing from last which will decrease the time to traverse last node and not start node
 '''
 class Node:

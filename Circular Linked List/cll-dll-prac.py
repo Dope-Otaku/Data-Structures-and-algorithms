@@ -18,3 +18,7 @@ class CLL:
         self.start = start
 
 
+    def isEmpty(self):
+        return self.start == None
+        
+

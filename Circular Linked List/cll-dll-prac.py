@@ -59,7 +59,8 @@ class CLL:
     def insertAfter(self, after, item):
         pass
     
-    
+    def deleteFront(self):
+        pass
 
 
 class CIterator:

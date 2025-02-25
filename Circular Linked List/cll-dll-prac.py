@@ -31,6 +31,8 @@ class CLL:
                 break
             temp = temp.next
 
+    def search(self, item):
+        pass
 
     def insertFront(self, item):
         newNode = Node(data = item)
@@ -67,6 +69,7 @@ class CIterator:
             raise StopIteration
         tempData = self.current.data
         count =1 
+        if self.current 
 
 
 

@@ -61,8 +61,11 @@ class CIterator:
         return self.current
 
     def __next__(self):
-        pass
-        
+        if not self.current:
+            raise StopIteration
+        tempData = self.current.data
+        count =1 
+
 
 
 

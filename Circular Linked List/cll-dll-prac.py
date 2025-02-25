@@ -48,6 +48,17 @@ class CLL:
         
     def insertLast(self, item):
         newNode = Node(data = item)
+        newNode.next = self.start
+        newNode.prev = self.start.prev
+        self.start.prev.next = newNode
+
+
+class CIterator:
+    def __init__(self, start):
+        self.current = start
+
+
+
 
 # driver's code
 
@@ -58,4 +69,6 @@ myList = CLL()
 print(myList.insertFront(3))
 print(myList.insertFront(2))
 print(myList.insertFront(1))
+print(myList.insertLast(4))
+print(myList.insertLast(5))
 print(myList.traverse())

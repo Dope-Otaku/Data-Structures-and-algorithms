@@ -57,6 +57,13 @@ class CIterator:
     def __init__(self, start):
         self.current = start
 
+    def __iter__(self):
+        return self.current
+
+    def __next__(self):
+        pass
+        
+
 
 
 

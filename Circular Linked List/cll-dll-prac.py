@@ -17,6 +17,8 @@ class CLL:
     def __init__(self, start=None):
         self.start = start
 
+    def __iter__(self):
+        return CIterator(self.start)
 
     def isEmpty(self):
         return self.start == None

@@ -56,6 +56,11 @@ class CLL:
         newNode.prev = self.start.prev
         self.start.prev.next = newNode
 
+    def insertAfter(self, after, item):
+        pass
+    
+    
+
 
 class CIterator:
     def __init__(self, start):

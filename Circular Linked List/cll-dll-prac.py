@@ -39,6 +39,9 @@ class CLL:
             elif temp.data == item and temp.next == self.start:
                 return f"found item:{item} at {temp}"
             temp = temp.next
+            if temp.data != item and temp.next == self.start:
+                return f"Item:{item}, not available in list!"
+        return f"List Empty!"
 
     def insertFront(self, item):
         newNode = Node(data = item)

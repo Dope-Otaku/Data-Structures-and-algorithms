@@ -31,7 +31,7 @@ class CLL:
                 break
             temp = temp.next
 
-    def search(self, item): #still logic for not finding any values pending!
+    def search(self, item):
         temp = self.start
         while temp is not None:
             if temp.data == item:
@@ -87,7 +87,15 @@ class CLL:
         
     
     def deleteFront(self):
-        pass
+        temp = self.start
+        if not self.isEmpty():
+            if self.start.next == self.start.prev:
+                temp = temp.next
+                self.start = temp
+                temp.prev, temp.next = None, None
+            temp.next.prev = self.start.prev
+            self.start.prev.next = temp
+            self.start = temp
 
 
 class CIterator:
@@ -121,4 +129,5 @@ print(myList.insertLast(4))
 print(myList.insertLast(5))
 print(myList.insertAfter(5, 5.5))
 print(myList.search(0))
+print(myList.deleteFront())
 print(myList.traverse())

@@ -116,6 +116,8 @@ class CLL:
 class CIterator:
     def __init__(self, start):
         self.current = start
+        self.temp = start
+        self.count = 0
 
     def __iter__(self):
         return self.current
@@ -124,8 +126,12 @@ class CIterator:
         if not self.current:
             raise StopIteration
         tempData = self.current.data
-        count =1 
-        # if self.current 
+        if self.current == self.temp and self.count == 1:
+            raise StopIteration
+        else:
+            self.count = 1
+        self.current = self.current.next
+        return tempData
 
 
 
@@ -149,3 +155,6 @@ print(myList.traverse())
 # print(myList.deleteLast())
 print(myList.deleteAfter(5))
 print(myList.traverse())
+
+for x in myList:
+    print(x, end=" ")

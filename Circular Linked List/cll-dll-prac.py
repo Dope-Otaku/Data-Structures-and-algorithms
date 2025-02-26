@@ -65,7 +65,18 @@ class CLL:
     def insertAfter(self, after, item):
         newNode =Node(data = item)
         if self.start == None:
-            self.start = newNode
+            self.insertFront(item)
+        temp = self.start
+        while temp is not None:
+            if temp.data == after:
+                newNode.prev = temp
+                newNode.next = temp.next
+                temp.next.prev = newNode
+                break
+            elif temp.data == after and temp.next == self.start:
+                self.insertLast(item)
+
+            temp = temp.next
         
     
     def deleteFront(self):
@@ -101,4 +112,5 @@ print(myList.insertFront(2))
 print(myList.insertFront(1))
 print(myList.insertLast(4))
 print(myList.insertLast(5))
+print(myList.insertAfter(4, 4.5))
 print(myList.traverse())

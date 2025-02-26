@@ -93,7 +93,9 @@ class CLL:
             self.start = self.start.next
 
     def deleteLast(self):
-        pass
+        if not self.isEmpty():
+            self.start.prev.prev.next = self.start
+            self.start.prev = self.start.prev.prev
 
 class CIterator:
     def __init__(self, start):
@@ -127,5 +129,6 @@ print(myList.insertLast(5))
 print(myList.insertAfter(5, 5.5))
 print(myList.search(0))
 print(myList.traverse())
-print(myList.deleteFront())
+# print(myList.deleteFront())
+print(myList.deleteLast())
 print(myList.traverse())

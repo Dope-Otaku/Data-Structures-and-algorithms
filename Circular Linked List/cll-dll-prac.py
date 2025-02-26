@@ -72,6 +72,8 @@ class CLL:
                 newNode.prev = temp
                 newNode.next = temp.next
                 temp.next.prev = newNode
+                temp.next = newNode
+                print("f")
                 break
             elif temp.data == after and temp.next == self.start:
                 self.insertLast(item)
@@ -112,5 +114,5 @@ print(myList.insertFront(2))
 print(myList.insertFront(1))
 print(myList.insertLast(4))
 print(myList.insertLast(5))
-print(myList.insertAfter(4, 4.5))
+print(myList.insertAfter(5, 5.5))
 print(myList.traverse())

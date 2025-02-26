@@ -86,15 +86,11 @@ class CLL:
             temp = temp.next
         
     # learned a new thing we can do manual memory managemnet just for learning purpose {del (variable name)} :- del temp
-    def deleteFront(self): #need fixing value not getting deleted!
-        temp = self.start
-        while temp is not None:
-            self.start.prev.next = temp.next
-            temp.next.prev = self.start.prev
-            self.start = temp
-            break
-        return
-
+    def deleteFront(self): 
+        if not self.isEmpty():
+            self.start.prev.next = self.start.next
+            self.start.next.prev = self.start.prev
+            self.start = self.start.next
 
 class CIterator:
     def __init__(self, start):
@@ -127,5 +123,6 @@ print(myList.insertLast(4))
 print(myList.insertLast(5))
 print(myList.insertAfter(5, 5.5))
 print(myList.search(0))
+print(myList.traverse())
 print(myList.deleteFront())
 print(myList.traverse())

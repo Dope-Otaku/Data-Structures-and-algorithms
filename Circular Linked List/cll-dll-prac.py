@@ -86,16 +86,18 @@ class CLL:
             temp = temp.next
         
     
-    def deleteFront(self):
+    def deleteFront(self): #need fixing value not getting deleted!
         temp = self.start
         if not self.isEmpty():
             if self.start.next == self.start.prev:
                 temp = temp.next
                 self.start = temp
-                temp.prev, temp.next = None, None
+                temp.prev = None
+                temp.next = None
             temp.next.prev = self.start.prev
             self.start.prev.next = temp
             self.start = temp
+        return f"not in loop"
 
 
 class CIterator:

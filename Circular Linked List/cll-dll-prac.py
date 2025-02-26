@@ -97,6 +97,10 @@ class CLL:
             self.start.prev.prev.next = self.start
             self.start.prev = self.start.prev.prev
 
+    def deleteAfter(self, after):
+        pass
+
+
 class CIterator:
     def __init__(self, start):
         self.current = start

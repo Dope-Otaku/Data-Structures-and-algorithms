@@ -51,13 +51,22 @@ class CLL:
             newNode.prev.next = newNode
         
     def insertLast(self, item):
-        newNode = Node(data = item)
+        newNode =Node(data = item)
+        if self.start == None:
+            self.start = newNode
         newNode.next = self.start
-        newNode.prev = self.start.prev
         self.start.prev.next = newNode
+        newNode.prev = self.start.prev
+        self.start.prev = newNode
+
+
+
 
     def insertAfter(self, after, item):
-        pass
+        newNode =Node(data = item)
+        if self.start == None:
+            self.start = newNode
+        
     
     def deleteFront(self):
         pass
@@ -75,7 +84,7 @@ class CIterator:
             raise StopIteration
         tempData = self.current.data
         count =1 
-        if self.current 
+        # if self.current 
 
 
 

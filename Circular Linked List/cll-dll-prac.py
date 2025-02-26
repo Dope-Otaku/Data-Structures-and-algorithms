@@ -85,19 +85,15 @@ class CLL:
 
             temp = temp.next
         
-    
+    # learned a new thing we can do manual memory managemnet just for learning purpose {del (variable name)} :- del temp
     def deleteFront(self): #need fixing value not getting deleted!
         temp = self.start
-        if not self.isEmpty():
-            if self.start.next == self.start.prev:
-                temp = temp.next
-                self.start = temp
-                temp.prev = None
-                temp.next = None
+        while temp is not None:
+            self.start.prev.next = temp.next
             temp.next.prev = self.start.prev
-            self.start.prev.next = temp
             self.start = temp
-        return f"not in loop"
+            break
+        return
 
 
 class CIterator:

@@ -31,8 +31,14 @@ class CLL:
                 break
             temp = temp.next
 
-    def search(self, item):
-        pass
+    def search(self, item): #still logic for not finding any values pending!
+        temp = self.start
+        while temp is not None:
+            if temp.data == item:
+                return f"found item:{item} at {temp}"
+            elif temp.data == item and temp.next == self.start:
+                return f"found item:{item} at {temp}"
+            temp = temp.next
 
     def insertFront(self, item):
         newNode = Node(data = item)
@@ -59,9 +65,6 @@ class CLL:
         newNode.prev = self.start.prev
         self.start.prev = newNode
 
-
-
-
     def insertAfter(self, after, item):
         newNode =Node(data = item)
         if self.start == None:
@@ -73,7 +76,6 @@ class CLL:
                 newNode.next = temp.next
                 temp.next.prev = newNode
                 temp.next = newNode
-                print("f")
                 break
             elif temp.data == after and temp.next == self.start:
                 self.insertLast(item)
@@ -115,4 +117,5 @@ print(myList.insertFront(1))
 print(myList.insertLast(4))
 print(myList.insertLast(5))
 print(myList.insertAfter(5, 5.5))
+print(myList.search(0))
 print(myList.traverse())

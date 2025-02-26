@@ -135,7 +135,7 @@ print(myList.insertAfter(4,7))
 # print(myList.deleteLast())
 # print(myList.deleteAfter(5))
 # print(myList.isEmpty())
-print(myList.search(3))
+print(myList.search(0))
 print(myList.travserse())
 
 

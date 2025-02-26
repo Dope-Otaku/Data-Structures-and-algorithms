@@ -98,7 +98,19 @@ class CLL:
             self.start.prev = self.start.prev.prev
 
     def deleteAfter(self, after):
-        pass
+        temp = self.start
+        while temp is not None:
+            if temp.data == after:
+                if temp.data == after and temp.next.next == None:
+                    self.deleteLast()
+                    # print("last loop mai jarah")
+                temp.next.next.prev = temp
+                temp.next = temp.next.next
+                # print("last nahi hai")
+                break
+                
+            temp = temp.next
+        # return f"fucked out of loop!"
 
 
 class CIterator:
@@ -134,5 +146,6 @@ print(myList.insertAfter(5, 5.5))
 print(myList.search(0))
 print(myList.traverse())
 # print(myList.deleteFront())
-print(myList.deleteLast())
+# print(myList.deleteLast())
+print(myList.deleteAfter(5))
 print(myList.traverse())

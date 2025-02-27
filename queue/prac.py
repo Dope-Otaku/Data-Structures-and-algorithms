@@ -14,8 +14,13 @@ class Queue:
         self.front = front
         self.rear = rear
 
+    def enqueue(self,data):
+        return self.arr.append(data)
+
 
 
 
 # driver code
 myList = Queue()
+
+print(myList.enqueue(1))

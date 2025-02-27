@@ -27,7 +27,7 @@ class Queue:
         return self.arr.append(data)
 
     def dequeue(self):
-        pass
+        self.arr.pop()
 
 
 
@@ -39,4 +39,6 @@ print(myList.is_empty())
 print(myList.enqueue(1))
 print(myList.enqueue(2))
 print(myList.get_front())
+print(myList.get_rear())
+print(myList.dequeue())
 print(myList.get_rear())

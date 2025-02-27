@@ -17,6 +17,9 @@ class Queue:
     def get_front(self):
         return self.arr[0]
 
+    def get_rear(self):
+        return self.arr[-1]
+
     def is_empty(self):
         return self.arr == []
 
@@ -34,4 +37,6 @@ myList = Queue()
 
 print(myList.is_empty())
 print(myList.enqueue(1))
+print(myList.enqueue(2))
 print(myList.get_front())
+print(myList.get_rear())

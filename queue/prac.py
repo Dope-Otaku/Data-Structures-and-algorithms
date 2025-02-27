@@ -14,11 +14,17 @@ class Queue:
         self.front = front
         self.rear = rear
 
+    def get_front(self):
+        return self.arr[0]
+
     def is_empty(self):
         return self.arr == []
 
     def enqueue(self,data):
         return self.arr.append(data)
+
+    def dequeue(self):
+        pass
 
 
 
@@ -28,4 +34,4 @@ myList = Queue()
 
 print(myList.is_empty())
 print(myList.enqueue(1))
-print(myList.is_empty())
+print(myList.get_front())

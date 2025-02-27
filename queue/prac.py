@@ -1,8 +1,8 @@
 class Queue:
-    def __init__(self, front=None, end=None):
+    def __init__(self, front=None, rear=None):
         self.arr = []
         self.front = front
-        self.end = end
+        self.rear = rear
 
 
 

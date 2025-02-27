@@ -1,3 +1,5 @@
 class Queue:
-    def __init__(self):
-        pass
+    def __init__(self, front=None, end=None):
+        self.arr = []
+        self.front = front
+        self.end = end

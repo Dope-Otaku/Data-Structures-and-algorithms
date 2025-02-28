@@ -23,6 +23,9 @@ class Deque:
     def delete_front(self):
         return self.arr.pop(0)
 
+    def delete_rear(self):
+        return self.arr.pop()
+
 #driver code
 
 myList = Deque()

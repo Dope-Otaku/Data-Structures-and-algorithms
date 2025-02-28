@@ -21,6 +21,9 @@ class PQ:
             raise EOFError("PQ has No elements")
         self.item.pop(0)[0]
 
+    def is_Empty(self):
+        return len(self.item) == 0
+
 
 
 

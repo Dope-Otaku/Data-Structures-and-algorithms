@@ -18,3 +18,16 @@ class Deque:
 
     def is_empty(self):
         return self.arr == []
+
+
+
+
+#driver code
+
+myList = Deque()
+
+print(myList.insert_front(4))
+print(myList.insert_front(3))
+print(myList.insert_front(2))
+print(myList.insert_front(1))
+print(myList.size())

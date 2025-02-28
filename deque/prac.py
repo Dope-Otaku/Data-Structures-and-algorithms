@@ -26,6 +26,10 @@ class Deque:
     def delete_rear(self):
         return self.arr.pop()
 
+    def print_all(self):
+        for x in self.arr:
+            print(x, end=" ")
+
 #driver code
 
 myList = Deque()

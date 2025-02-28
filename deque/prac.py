@@ -8,5 +8,7 @@ class Deque:
         self.arr = []
 
     def insert_front(self, item):
-        return arr.insert(0, item)
-        
+        return self.arr.insert(0, item)
+
+    def insert_rear(self, item):
+        return self.arr.append(item)

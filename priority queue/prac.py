@@ -15,3 +15,12 @@ class PQ:
         while index<len(self.item) and self.item[index][1]<=priority:
             index+=1
         self.item.insert(index, (data, priority))
+
+
+
+
+
+# driver code
+
+myList = PQ()
+

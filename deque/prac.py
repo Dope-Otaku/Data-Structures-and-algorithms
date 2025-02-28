@@ -20,7 +20,8 @@ class Deque:
         return self.arr == []
 
 
-
+    def delete_front(self):
+        return self.arr.pop(0)
 
 #driver code
 

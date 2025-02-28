@@ -40,6 +40,7 @@ print(myList.insert_front(2))
 print(myList.insert_front(1))
 print(myList.size())
 print(myList.print_all())
-print(myList.delete_front())
+# print(myList.delete_front())
+print(myList.delete_rear())
 print(myList.print_all())
 

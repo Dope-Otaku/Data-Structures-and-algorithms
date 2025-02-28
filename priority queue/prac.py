@@ -16,6 +16,11 @@ class PQ:
             index+=1
         self.item.insert(index, (data, priority))
 
+    def pop(self):
+        if self.item == []:
+            raise EOFError("PQ has No elements")
+        self.item.pop(0)[0]
+
 
 
 
@@ -24,3 +29,4 @@ class PQ:
 
 myList = PQ()
 
+print(myList.pop())

@@ -12,3 +12,6 @@ class Deque:
 
     def insert_rear(self, item):
         return self.arr.append(item)
+
+    def size(self):
+        return len(self.arr)

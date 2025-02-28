@@ -15,3 +15,6 @@ class Deque:
 
     def size(self):
         return len(self.arr)
+
+    def is_empty(self):
+        return self.arr == []

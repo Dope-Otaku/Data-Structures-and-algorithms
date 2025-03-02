@@ -16,9 +16,13 @@ class BST:
     def insertatroot(self, data):
         newNode = Node(item=data)
         if not self.isEmpty():
-            return "hek"
+            newNode.right = self.root.right
+            newNode.left = self.root.left
+            self.root.left, self.root.right = None, None
+            self.root = newNode
+            return f"changed the root node to {data}"
         self.root = newNode
-        return f"inserted root node"
+        return f"inserted root node {data}"
 
 
 
@@ -30,3 +34,4 @@ class BST:
 myList = BST()
 print(myList.insertatroot(data=1))
 print(myList.isEmpty())
+print(myList.insertatroot(data=2))

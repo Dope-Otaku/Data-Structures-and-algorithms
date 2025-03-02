@@ -14,7 +14,10 @@ class BST:
         return self.root == None
 
     def insertion(self, data):
-        pass
+        newNode = Node(item=data)
+        if self.root == None:
+            self.root = newNode
+        
 
 
 
@@ -22,6 +25,5 @@ class BST:
 # driver code
 
 myList = BST()
-print(myList.insertatroot(data=1))
+print(myList.insertion(1))
 print(myList.isEmpty())
-print(myList.insertatroot(data=2))

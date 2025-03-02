@@ -9,3 +9,6 @@ class Node:
 class BST:
     def __init__(self, root):
         self.root = root
+
+    def isEmpty(self):
+        return self.root == None

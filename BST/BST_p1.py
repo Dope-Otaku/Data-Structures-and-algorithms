@@ -25,29 +25,14 @@ class BST:
             root.right = self.rinsert(root.right, data)
         return root
 
-    # def insertion(self, data):
-    #     newNode = Node(item=data)
-    #     if self.root == None:
-    #         self.root = newNode
-    #     else:
-    #         temp = self.root
-    #         while temp is not None:
-    #             if self.root.item > data:
-    #                 if self.root.item == None:
-    #                     self.root.left = newNode
-    #                 else:
-    #                     temp = self.root.left
-                        
-    #                 if self.root.item
-    #             elif self.root.item < data:
-    #                 self.root.right = newNode
-            
-
 
 
 
 # driver code
 
 myList = BST()
-print(myList.insertion(1))
+print(myList.insert(100))
+print(myList.insert(10))
+print(myList.insert(101))
+print(myList.insert(20))
 print(myList.isEmpty())

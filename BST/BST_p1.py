@@ -3,3 +3,9 @@ class Node:
         self.left = left
         self.item = item
         self.right = right
+
+
+
+class BST:
+    def __init__(self, root):
+        self.root = root

@@ -31,6 +31,11 @@ class BST:
             newNode = Node(item=data)
             self.root.left = newNode
 
+    def insertatright(self, data):
+        if self.root.right == None:
+            newNode = Node(item=data)
+            self.root.right = newNode
+
 
 
 

@@ -7,8 +7,20 @@ class Node:
 
 
 class BST:
-    def __init__(self, root):
+    def __init__(self, root=None):
         self.root = root
 
     def isEmpty(self):
         return self.root == None
+
+
+
+
+
+
+
+
+# driver code
+
+myList = BST()
+print(myList.isEmpty())

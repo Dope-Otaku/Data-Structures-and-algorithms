@@ -13,22 +13,34 @@ class BST:
     def isEmpty(self):
         return self.root == None
 
-    def insertion(self, data):
-        newNode = Node(item=data)
-        if self.root == None:
-            self.root = newNode
-        else:
-            temp = self.root
-            while temp is not None:
-                if self.root.item > data:
-                    if self.root.item == None:
-                        self.root.left = newNode
-                    else:
-                        temp = self.root.left
+    def insert(self, data):
+        self.root = self.rinsert(self.root, data)
+
+    def rinsert(self, root, data):
+        if self.root is None:
+            return Node(item=data)
+        if data < root.item:
+            root.left =  self.rinsert(root.left, data)
+        elif data > root.item:
+            root.right = self.rinsert(root.right, data)
+        return root
+
+    # def insertion(self, data):
+    #     newNode = Node(item=data)
+    #     if self.root == None:
+    #         self.root = newNode
+    #     else:
+    #         temp = self.root
+    #         while temp is not None:
+    #             if self.root.item > data:
+    #                 if self.root.item == None:
+    #                     self.root.left = newNode
+    #                 else:
+    #                     temp = self.root.left
                         
-                    if self.root.item
-                elif self.root.item < data:
-                    self.root.right = newNode
+    #                 if self.root.item
+    #             elif self.root.item < data:
+    #                 self.root.right = newNode
             
 
 

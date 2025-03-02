@@ -24,7 +24,12 @@ class BST:
         self.root = newNode
         return f"inserted root node {data}"
 
+    
 
+    def insertatleft(self, data):
+        if self.root.left == None:
+            newNode = Node(item=data)
+            self.root.left = newNode
 
 
 

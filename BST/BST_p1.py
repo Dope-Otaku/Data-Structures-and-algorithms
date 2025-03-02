@@ -13,7 +13,12 @@ class BST:
     def isEmpty(self):
         return self.root == None
 
-
+    def insertatroot(self, data):
+        newNode = Node(item=data)
+        if not self.isEmpty():
+            return "hek"
+        self.root = newNode
+        return f"inserted root node"
 
 
 
@@ -23,4 +28,5 @@ class BST:
 # driver code
 
 myList = BST()
+print(myList.insertatroot(data=1))
 print(myList.isEmpty())

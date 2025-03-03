@@ -25,6 +25,8 @@ class BST:
             root.right = self.rinsert(root.right, data)
         return root
 
+    def traversing_preorder(self):
+        pass
 
 
 

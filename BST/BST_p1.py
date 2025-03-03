@@ -35,7 +35,8 @@ class BST:
                 temp = temp.left
                 pass
 
-
+    def traversing_postorder(self):
+        passs
 
 # driver code
 

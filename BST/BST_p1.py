@@ -26,7 +26,14 @@ class BST:
         return root
 
     def traversing_preorder(self):
-        pass
+        temp = self.root
+        if temp is None:
+            return temp.item
+        else:
+            while  temp is not None:
+                print(temp.item)
+                temp = temp.left
+                pass
 
 
 

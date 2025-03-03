@@ -25,20 +25,20 @@ class BST:
             root.right = self.rinsert(root.right, data)
         return root
 
-    def traversing_preorder(self, root):
-        if self.root is None:
-            return self.root.item
-        print(root.item)
+    # def traversing_preorder(self, root):
+    #     if self.root is None:
+    #         return self.root.item
+    #     print(root.item)
 
-    def traversing_postorder(self):
-        temp = self.root
-        if temp is None:
-            return temp.item
-        else:
-            while  temp is not None:
-                print(temp.item)
-                temp = temp.left
-                pass
+    # def traversing_postorder(self):
+    #     temp = self.root
+    #     if temp is None:
+    #         return temp.item
+    #     else:
+    #         while  temp is not None:
+    #             print(temp.item)
+    #             temp = temp.left
+    #             pass
 
 # driver code
 

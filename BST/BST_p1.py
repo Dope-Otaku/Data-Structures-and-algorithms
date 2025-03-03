@@ -40,8 +40,12 @@ class BST:
         reults = []
         self.rinorder(self.root, reults)
         return reults
-        
 
+    def rinorder(self, root, reults):
+        if root:
+            self.rinorder(root.left, reults)
+            reults.append(root.item)
+            self.rinorder(root.right, reults)
 
     # def traversing_preorder(self, root):
     #     if self.root is None:
@@ -67,3 +71,4 @@ print(myList.insert(101))
 print(myList.insert(20))
 print(myList.isEmpty())
 print(myList.search(20))
+print(myList.inorder())

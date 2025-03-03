@@ -28,7 +28,14 @@ class BST:
     def search(self, data):
         return self.rsearch(self.root, data)
 
-    
+    def rsearch(self, root, data):
+        if root is None or root.item == data:
+            return root
+        if data < root.item:
+            return self.rsearch(root.left, data)
+        else:
+            return self.rsearch(root.right, data)
+            
 
     # def traversing_preorder(self, root):
     #     if self.root is None:

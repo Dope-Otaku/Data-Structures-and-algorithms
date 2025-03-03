@@ -35,7 +35,13 @@ class BST:
             return self.rsearch(root.left, data)
         else:
             return self.rsearch(root.right, data)
-            
+
+    def inorder(self):
+        reults = []
+        self.rinorder(self.root, reults)
+        return reults
+        
+
 
     # def traversing_preorder(self, root):
     #     if self.root is None:
@@ -60,3 +66,4 @@ print(myList.insert(10))
 print(myList.insert(101))
 print(myList.insert(20))
 print(myList.isEmpty())
+print(myList.search(20))

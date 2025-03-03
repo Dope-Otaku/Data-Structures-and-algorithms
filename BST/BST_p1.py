@@ -25,6 +25,11 @@ class BST:
             root.right = self.rinsert(root.right, data)
         return root
 
+    def search(self, data):
+        return self.rsearch(self.root, data)
+
+    
+
     # def traversing_preorder(self, root):
     #     if self.root is None:
     #         return self.root.item

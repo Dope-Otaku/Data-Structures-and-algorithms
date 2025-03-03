@@ -17,7 +17,7 @@ class BST:
         self.root = self.rinsert(self.root, data)
 
     def rinsert(self, root, data):
-        if self.root is None:
+        if root is None:
             return Node(item=data)
         if data < root.item:
             root.left =  self.rinsert(root.left, data)

@@ -47,6 +47,11 @@ class BST:
             reults.append(root.item)
             self.rinorder(root.right, reults)
 
+    def preorder(self):
+        results = []
+        self.rpreorder(self.root, results)
+        return results
+
     # def traversing_preorder(self, root):
     #     if self.root is None:
     #         return self.root.item

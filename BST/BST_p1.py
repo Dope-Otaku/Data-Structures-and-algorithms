@@ -36,7 +36,14 @@ class BST:
                 pass
 
     def traversing_postorder(self):
-        passs
+        temp = self.root
+        if temp is None:
+            return temp.item
+        else:
+            while  temp is not None:
+                print(temp.item)
+                temp = temp.left
+                pass
 
 # driver code
 

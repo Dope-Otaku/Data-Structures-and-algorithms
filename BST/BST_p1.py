@@ -58,12 +58,12 @@ class BST:
             self.rpreorder(root.left, results)
             self.rpreorder(root.right, results)
 
-    def postorder(self):
+    def postorder(self):#postorder -> tl < tr < root
         results = []
         self.rpostorder(self.root, results)
         return results
 
-    def rpostorder(self, root, results): #postorder -> tl < tr < root
+    def rpostorder(self, root, results): 
         if root:
             self.rpostorder(root.left, results)
             self.rpostorder(root.right, results)

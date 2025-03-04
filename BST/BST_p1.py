@@ -83,11 +83,19 @@ class BST:
             return root
         if data != root.item:
             if data < root.item:
-                return self.rdelete(root.left, data)
+                self.left = self.rdelete(root.left, data)
             else:
-                return self.rdelete(root.right, data)
+                self.right = self.rdelete(root.right, data)
+        elif data == root.item:
+            if root.left is None:
+                return root.right
+            elif root.right is None:
+                return root.left
+            root.item = self.min_val(root.right) #this part is confusing
+            self.rdelete(root.right, root.item)
+            return root
         else:
-            return f"deleted this root:{root} item:{item}"
+            return f"item not found!"
     
     def min_val(self, temp):
         curr = temp

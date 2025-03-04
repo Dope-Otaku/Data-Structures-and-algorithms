@@ -80,8 +80,14 @@ class BST:
     
     def min_val(self, temp):
         curr = temp
-        while curr is not None:
-            curr = curr.next
+        while curr.left is not None:
+            curr = curr.left
+        return curr.item
+
+    def max_val(self, temp):
+        curr = temp
+        while curr.right is not None:
+            curr = curr.right
         return curr.item
    
 

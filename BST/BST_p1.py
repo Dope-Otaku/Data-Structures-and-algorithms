@@ -47,7 +47,7 @@ class BST:
             reults.append(root.item)
             self.rinorder(root.right, reults)
 
-    def preorder(self):
+    def preorder(self):#preorder -> root < tl < tr 
         results = []
         self.rpreorder(self.root, results)
         return results

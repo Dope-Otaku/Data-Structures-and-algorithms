@@ -9,12 +9,18 @@ class Node:
 class BST:
     def __init__(self, root=None):
         self.root = root
+        self.count = 0
+
 
     def isEmpty(self):
         return self.root == None
 
+    def size(self):
+        return self.count
+
     def insert(self, data):
         self.root = self.rinsert(self.root, data)
+        self.count += 1
 
     def rinsert(self, root, data):
         if root is None:
@@ -83,3 +89,4 @@ print(myList.search(20))
 print(myList.inorder())
 print(myList.preorder())
 print(myList.postorder())
+print(myList.size())

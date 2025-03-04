@@ -63,7 +63,7 @@ class BST:
         self.rpostorder(self.root, results)
         return results
 
-    def rpostorder(self, root, results):
+    def rpostorder(self, root, results): #postorder -> tl < tr < root
         if root:
             self.rpostorder(root.left, results)
             self.rpostorder(root.right, results)

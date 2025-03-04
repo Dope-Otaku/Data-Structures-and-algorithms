@@ -76,7 +76,18 @@ class BST:
             results.append(root.item)
 
     def delete(self, data):
-        pass
+        self.root = self.rdelete(self.root, data)
+
+    def rdelete(self, root, data):
+        if root is None:
+            return root
+        if data != root.item:
+            if data < root.item:
+                return self.rdelete(root.left, data)
+            else:
+                return self.rdelete(root.right, data)
+        else:
+            return f"deleted this root:{root} item:{item}"
     
     def min_val(self, temp):
         curr = temp

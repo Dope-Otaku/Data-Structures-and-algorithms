@@ -58,6 +58,13 @@ class BST:
             self.rpreorder(root.left, results)
             self.rpreorder(root.right, results)
 
+    def postorder(self):
+        results = []
+        self.rpostorder(self.root, results)
+        return results
+
+        
+
     # def traversing_preorder(self, root):
     #     if self.root is None:
     #         return self.root.item

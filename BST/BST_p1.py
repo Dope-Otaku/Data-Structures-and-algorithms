@@ -9,17 +9,17 @@ class Node:
 class BST:
     def __init__(self, root=None):
         self.root = root
-        self.count = 0
+        # self.count = 0
 
 
     def isEmpty(self):
         return self.root == None
 
     def size(self):
-        return self.count
+        return len(self.inorder())
 
     def insert(self, data):
-        self.count += 1
+        # self.count += 1
         self.root = self.rinsert(self.root, data)
 
     def rinsert(self, root, data):
@@ -77,25 +77,26 @@ class BST:
 
     def delete(self, data):
         self.root = self.rdelete(self.root, data)
+        # self.count -= 1
+
 
     def rdelete(self, root, data):
         if root is None:
             return root
-        if data != root.item:
-            if data < root.item:
-                self.left = self.rdelete(root.left, data)
-            else:
-                self.right = self.rdelete(root.right, data)
-        elif data == root.item:
+        
+        if data < root.item:
+            root.left = self.rdelete(root.left, data)
+        elif data > root.item:
+            root.right = self.rdelete(root.right, data)
+        else:
             if root.left is None:
                 return root.right
             elif root.right is None:
                 return root.left
             root.item = self.min_val(root.right) #this part is confusing
-            self.rdelete(root.right, root.item)
-            return root
-        else:
-            return f"item not found!"
+            root.right = self.rdelete(root.right, root.item)
+        return root
+        
     
     def min_val(self, temp):
         curr = temp
@@ -117,9 +118,22 @@ print(myList.insert(100))
 print(myList.insert(10))
 print(myList.insert(101))
 print(myList.insert(20))
+print(myList.insert(45))
+print(myList.insert(33))
+print(myList.insert(9))
+print(myList.insert(2))
+print(myList.insert(25))
+print(myList.insert(26))
+print(myList.insert(34))
+print(myList.insert(88))
+print(myList.insert(200))
 print(myList.isEmpty())
 print(myList.search(20))
 print(myList.inorder())
 print(myList.preorder())
 print(myList.postorder())
 print(myList.size())
+print(myList.delete(2))
+print(myList.inorder())
+print(myList.size())
+

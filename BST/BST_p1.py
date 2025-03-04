@@ -75,6 +75,8 @@ class BST:
             self.rpostorder(root.right, results)
             results.append(root.item)
 
+    def delete(self, data):
+        pass
    
 
 # driver code

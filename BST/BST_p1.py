@@ -36,7 +36,7 @@ class BST:
         else:
             return self.rsearch(root.right, data)
 
-    def inorder(self):
+    def inorder(self): #inorder -> tl < root < tr
         reults = []
         self.rinorder(self.root, reults)
         return reults

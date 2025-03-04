@@ -19,8 +19,8 @@ class BST:
         return self.count
 
     def insert(self, data):
-        self.root = self.rinsert(self.root, data)
         self.count += 1
+        self.root = self.rinsert(self.root, data)
 
     def rinsert(self, root, data):
         if root is None:
@@ -77,6 +77,12 @@ class BST:
 
     def delete(self, data):
         pass
+    
+    def min_val(self, temp):
+        curr = temp
+        while curr is not None:
+            curr = curr.next
+        return curr.item
    
 
 # driver code

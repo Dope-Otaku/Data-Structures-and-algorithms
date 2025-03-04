@@ -133,7 +133,7 @@ print(myList.inorder())
 print(myList.preorder())
 print(myList.postorder())
 print(myList.size())
-print(myList.delete(2))
+print(myList.delete(100))
 print(myList.inorder())
 print(myList.size())
 

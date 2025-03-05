@@ -27,3 +27,6 @@ class Graph:
             return self.adj_matrix[u][v] != 0
         else:
             return f"Invalid Vertex"
+
+    def print_adj_matrix(self):
+        pass

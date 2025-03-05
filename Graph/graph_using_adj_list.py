@@ -23,8 +23,10 @@ class Graph:
             return any(vertex == v for vertex, x in self.adj_list[u])
 
     def print_adj_list(self):
+        v = 0
         for vertex, c in self.adj_list.items():
-            print(f"V-> {vertex}:{c}")
+            print(f"V{v}-> {vertex}:{c}")
+            v+=1
 
 
 #driver code

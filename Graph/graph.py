@@ -23,4 +23,7 @@ class Graph:
 
 
     def has_edge(self, u, v):
-        pass
+        if 0<=u<self.vertex_count and 0<=v<self.vertex_count:
+            return self.adj_matrix[u][v] != 0
+        else:
+            return f"Invalid Vertex"

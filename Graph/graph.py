@@ -23,4 +23,5 @@ class Graph:
             return any(vertex == v for vertex, x in self.adj_list[u])
 
     def print_adj_list(self):
-        pass
+        for vertex, c in self.adj_list.items():
+            print(f"V-> {vertex}:{n}")

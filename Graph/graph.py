@@ -24,4 +24,19 @@ class Graph:
 
     def print_adj_list(self):
         for vertex, c in self.adj_list.items():
-            print(f"V-> {vertex}:{n}")
+            print(f"V-> {vertex}:{c}")
+
+
+#driver code
+
+myList = Graph(5)
+
+print(myList.add_edge(2,4))
+print(myList.add_edge(1,4))
+print(myList.add_edge(2,2))
+print(myList.add_edge(0,4))
+print(myList.add_edge(0,0))
+print(myList.has_edge(0,0))
+print(myList.print_adj_list())
+print(myList.remove_edge(0,0))
+print(myList.print_adj_list())

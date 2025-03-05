@@ -22,4 +22,5 @@ class Graph:
             return f"invalid vertex"
 
 
-    
+    def has_edge(self, u, v):
+        pass

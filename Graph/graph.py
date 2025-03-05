@@ -29,4 +29,5 @@ class Graph:
             return f"Invalid Vertex"
 
     def print_adj_matrix(self):
-        pass
+        for row_list in self.adj_matrix:
+            print(" ".join(map(str, row_list)))

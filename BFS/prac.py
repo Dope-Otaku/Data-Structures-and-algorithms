@@ -15,3 +15,7 @@ queue = [] #intialized a queue
 def bfs(visited, graph, node):
     visited.append(node)
     queue.append(node)
+
+    while queue: #creating a loop to visit each node
+        m = queue.pop(0)
+        print(m, end=" ")

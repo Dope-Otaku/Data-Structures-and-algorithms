@@ -11,3 +11,7 @@ graph = {}
 
 visited = [] #List for visited Nodes.
 queue = [] #intialized a queue
+
+def bfs(visited, graph, node):
+    visited.append(node)
+    queue.append(node)

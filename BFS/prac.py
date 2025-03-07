@@ -5,3 +5,9 @@ in this section we will learn about bfs in deep
 2. we will use queue in this
 
 '''
+
+graph = {}
+
+
+visited = [] #List for visited Nodes.
+queue = [] #intialized a queue

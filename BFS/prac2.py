@@ -6,3 +6,11 @@ graph = {
     '4' : ['8'],
     '8' : []
 }
+
+visited = []
+queue = []
+
+
+# def bfs(visited, graph, node):
+#     visited.append(node)
+#     queue.append(node)

@@ -20,7 +20,7 @@ def bfs(visited, graph, node):
         print(m, end=' ')
 
         for neighbour in graph[m]: #here we look for a value in graph at place m
-            if neighbour not in visited:
+            if neighbour not in visited: #now we are checking whether that thing is not in visited
                 visited.append(neighbour)
                 queue.append(neighbour)
 

@@ -19,6 +19,13 @@ def bfs(visited, graph, node):
         m = queue.pop(0)
         print(m, end=' ')
 
-         if neighbour in graph[m]:
-            visited.append(neighbour)
-            queue.append(neighbour)
+        for neighbour in graph[m]:
+            if neighbour not in visited:
+                visited.append(neighbour)
+                queue.append(neighbour)
+
+         
+            
+
+
+bfs(visited, graph, '5')

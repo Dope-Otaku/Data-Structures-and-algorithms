@@ -11,6 +11,6 @@ visited = []
 queue = []
 
 
-# def bfs(visited, graph, node):
-#     visited.append(node)
-#     queue.append(node)
+def bfs(visited, graph, node):
+    visited.append(node)
+    queue.append(node)

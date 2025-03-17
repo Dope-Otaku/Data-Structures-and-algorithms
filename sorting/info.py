@@ -19,3 +19,13 @@ in this sort method we usually compare all the comaprisons till the comparisons 
 meaning we check pair of values and if lower value is present we swap them.
 
 '''
+
+
+'''
+Modified bubble sort
+
+in this sort method we usually compare all the comaprisons till the comparisons are empty, 
+meaning we check pair of values and if lower value is present we swap them,
+but once the list is sorted we end the operations immediately
+
+'''

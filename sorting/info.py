@@ -2,7 +2,7 @@
 
 # there are various soritng algorithms some of the major ones are:
 '''
-1. bubble sort
+1. bubble sort -> done
 2. modified bubble sort
 3. selection sort
 4. insertion sort

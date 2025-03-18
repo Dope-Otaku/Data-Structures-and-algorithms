@@ -3,7 +3,7 @@
 # there are various soritng algorithms some of the major ones are:
 '''
 1. bubble sort -> done
-2. modified bubble sort
+2. modified bubble sort -> pending
 3. selection sort
 4. insertion sort
 5. quick sort

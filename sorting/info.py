@@ -16,7 +16,7 @@
 bubble sort
 
 in this sort method we usually compare all the comaprisons till the comparisons are empty, 
-meaning we check pair of values and if lower value is present we swap them.
+meaning we check pair of values and if lower value is present we swap them.q
 
 '''
 

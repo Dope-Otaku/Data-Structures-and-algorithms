@@ -35,7 +35,7 @@ but once the list is sorted we end the operations immediately
 selection sort
 
 in this sort method , it usually works as a human brain we check the lowest value and swap the 0th element with
-it first then we check the second lowest value and update the 1st index value, like that we sort the list]
+it first then we check the second lowest value & update the 1st index value, like that we sort the list]
 '''
 
 

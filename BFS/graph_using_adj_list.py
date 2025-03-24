@@ -20,6 +20,8 @@ class Graph:
             self.adj_list[v] = [(vertex, weight) for vertex, weight in self.adj_list[v] if vertex!=u]
         else:
             return f"invalid vertex"
+#hello this is a remp function
+            
 
     def has_edge(self, u, v):
         if 0<=u<self.vertex_count and 0<=v<self.vertex_count:

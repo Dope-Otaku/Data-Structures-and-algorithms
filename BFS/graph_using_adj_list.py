@@ -20,8 +20,7 @@ class Graph:
             self.adj_list[v] = [(vertex, weight) for vertex, weight in self.adj_list[v] if vertex!=u]
         else:
             return f"invalid vertex"
-#hello this is a remp function
-
+#hello this is a remp 
 #hello this is a remp function
 #hello this is a remp function
 

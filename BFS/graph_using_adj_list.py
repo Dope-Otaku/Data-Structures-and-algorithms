@@ -21,7 +21,6 @@ class Graph:
         else:
             return f"invalid vertex"
 #hello this is a remp function
-#hello this is a remp function
 
 #hello this is a remp function
 #hello this is a remp function

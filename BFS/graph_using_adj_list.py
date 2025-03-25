@@ -11,7 +11,6 @@ class Graph:
             self.adj_list[v].append((u, weight))
         else:
             return f"invalid vertex"
-#hello this is a remp function
             
 
     def remove_edge(self, u, v):

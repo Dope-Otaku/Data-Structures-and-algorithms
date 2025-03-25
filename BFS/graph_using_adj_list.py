@@ -22,7 +22,6 @@ class Graph:
 
 
 
-#hello this is a remp function
     
 
     def has_edge(self, u, v):

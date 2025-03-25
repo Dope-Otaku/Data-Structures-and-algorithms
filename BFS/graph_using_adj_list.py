@@ -20,7 +20,6 @@ class Graph:
         else:
             return f"invalid vertex"
 #hello this is a remp 
-#hello this is a remp function
 
 
 

@@ -39,6 +39,7 @@ myList = Graph(5)
 
 print(myList.add_edge(2,4))
 print(myList.add_edge(1,4))
+print(myList.add_edge(1,4))
 print(myList.add_edge(2,2))
 print(myList.add_edge(0,4))
 print(myList.add_edge(0,4))

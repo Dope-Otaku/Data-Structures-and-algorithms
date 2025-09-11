@@ -13,12 +13,12 @@ n = 5
 
 for i in range(n):
     #space
-    for j in range(n-i+1):
+    for j in range(0, n-i, -1):
         print(" ", end="")
     #star
-    for k in range(2*n+1):
+    for j in range(2*n+1):
         print("*", end="")
     #space
-    for l in range(n-i+1):
+    for j in range(0, n-i, -1):
         print(" ", end="")
     print()

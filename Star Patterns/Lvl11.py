@@ -10,9 +10,9 @@ we need to implement this...
 
 '''
 n = 5
-m = 0
 
 for i in range(n):
+    m = i%2
     for j in range(i+1):
         if m == 0:
             print("1", end="")

@@ -16,6 +16,9 @@ for i in range(n):
         print(" ", end="")
     
     #for content after space
-    for j in range(2*i+1):
+    for j in range(2*i):
+        print("x", end="")
+
+    for j in range(2*i):
         print("x", end="")
     print()

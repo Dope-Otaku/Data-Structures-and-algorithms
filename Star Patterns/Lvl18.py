@@ -8,7 +8,7 @@ we need to implement this
 
 '''
 
-n = 5
+n = 4
 
 for i in range(n):
     # for spaces
@@ -17,4 +17,5 @@ for i in range(n):
     
     #for content after space
     for j in range(2*i+1):
-        print("x")
+        print("x", end="")
+    print()

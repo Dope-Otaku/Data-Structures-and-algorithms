@@ -13,3 +13,5 @@ while m > 0:
     m = m//10
 
 print(count)
+
+#solved

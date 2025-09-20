@@ -15,3 +15,16 @@ while m > 0:
 print(count)
 
 #solved
+
+
+#optimal approach
+
+import math
+
+a = n
+
+def count_digi(a):
+    cnt = math.log10(a) +1
+    return cnt
+
+print(count_digi(a))

@@ -18,6 +18,7 @@ print(count)
 
 
 #optimal approach
+# completed
 
 import math
 

@@ -19,7 +19,7 @@ print(count)
 
 #optimal approach
 # completed
-# completed
+
 
 import math
 
@@ -30,3 +30,9 @@ def count_digi(a):
     return cnt
 
 print(count_digi(a))
+
+
+
+
+
+#hi i have an update on this new year so from today on we will be pulling on a new self and be consistent throught whole year i promise

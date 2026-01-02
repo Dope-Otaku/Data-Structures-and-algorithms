@@ -1,10 +1,11 @@
 # Given an integer N, return the number of digits in N.
 
 
-n = 4578
+n = '4578'
 
-#first mistake len() function is only available for arrray data type
-print(len(n))
+#first mistake len() function is only available for arrray and string data type
+a = n
+print(len(a))
 
 # m = n
 # count = 0

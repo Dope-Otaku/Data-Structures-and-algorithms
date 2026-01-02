@@ -21,7 +21,9 @@ val = [1,2,2]
 count = 0
 for chr in val:
     count +=1
+    
 print(count)
+print(sum(1 for _ in val)) #learned a new thing generator expression and sum function
 
 # m = n
 # count = 0

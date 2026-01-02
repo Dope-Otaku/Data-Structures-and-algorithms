@@ -3,33 +3,36 @@
 
 n = 4578
 
-m = n
-count = 0
+#first mistake len() function is only available for arrray data type
+print(len(n))
+
+# m = n
+# count = 0
 
 
-while m > 0:
-    last_digit = m%10
-    count +=1
-    m = m//10
+# while m > 0:
+#     last_digit = m%10
+#     count +=1
+#     m = m//10
 
-print(count)
+# print(count)
 
-#solved
-
-
-#optimal approach
-# completed
+# #solved
 
 
-import math
+# #optimal approach
+# # completed
 
-a = n
 
-def count_digi(a):
-    cnt = math.log10(a) +1
-    return cnt
+# import math
 
-print(count_digi(a))
+# a = n
+
+# def count_digi(a):
+#     cnt = math.log10(a) +1
+#     return cnt
+
+# print(count_digi(a))
 
 
 

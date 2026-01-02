@@ -6,11 +6,12 @@ n = 4578
 #first mistake len() function is only available for arrray and string data type
 #second mistake learned that int value mai loop nahi laga sakte
 a = n
-b= []
-for i in range(0,5):
-    b.append(n[i])
-    i+=1
-print(b)
+flag = 0
+while a > 0:
+    # last = a%10
+    flag+=1
+    a = a//10
+print(flag)
 
 # m = n
 # count = 0

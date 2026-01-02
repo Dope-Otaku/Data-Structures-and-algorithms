@@ -13,6 +13,16 @@ while a > 0:
     a = a//10
 print(flag)
 
+
+
+'''.   so let's say what if we have a string we can use len built in function but i want to create of my own '''
+
+val = [1,2,2]
+count = 0
+for chr in val:
+    count +=1
+print(count)
+
 # m = n
 # count = 0
 

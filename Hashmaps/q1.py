@@ -20,7 +20,7 @@ nums = [2,7,11,15]
 target = 9
 
 
-def two_sum():
+def two_sum(nums):
     num_to_index = {}
 
     for i, num in enumerate(nums):
@@ -28,3 +28,5 @@ def two_sum():
         if complement in num_to_index:
             return [num_to_index[complement],i]
         num_to_index[num] = i
+
+print(two_sum(nums=nums))

@@ -13,3 +13,8 @@ output : [0,1]
 explanation: because nums[0] + nums[1] == 9, we return [0,1]
 
 '''
+
+
+nums = [2,7,11,15]
+
+target = 9

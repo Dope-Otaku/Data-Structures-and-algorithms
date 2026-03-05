@@ -18,3 +18,13 @@ explanation: because nums[0] + nums[1] == 9, we return [0,1]
 nums = [2,7,11,15]
 
 target = 9
+
+
+def two_sum():
+    num_to_index = {}
+
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in num_to_index:
+            return [num_to_index[complement],i]
+        num_to_index[num] = i

@@ -24,9 +24,9 @@ def two_sum(nums):
     num_to_index = {}
 
     for i, num in enumerate(nums):
-        complement = target - num
-        if complement in num_to_index:
-            return [num_to_index[complement],i]
+        comp = target - num
+        if comp in num_to_index:
+            return [num_to_index[comp], i]
         num_to_index[num] = i
 
 print(two_sum(nums=nums))

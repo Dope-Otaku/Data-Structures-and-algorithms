@@ -14,7 +14,7 @@ Explanation: After removing non-alphanumeric characters, it l
 '''
 
 
-s = "A man, a plan, a canal: Panama"
+s = "race a car"
 
 def is_palindrome(input):
     l, r = 0, len(input)-1

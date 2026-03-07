@@ -12,3 +12,21 @@ Explanation: After removing non-alphanumeric characters, it l
 
 
 '''
+
+
+s = "A man, a plan, a canal: Panama"
+
+def is_palindrome(input):
+    l, r = 0, len(input)-1
+
+    while l < r:
+        while l < r and not s[l].isalnum():
+            l += 1
+        while l < r and not s[r].isalnum():
+            r -= 1
+
+        if s[l].lower() != s[r].lover():
+            return False
+        l+=1
+        r-=1
+    return True

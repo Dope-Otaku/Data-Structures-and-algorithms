@@ -7,3 +7,13 @@ sum among all subarrays of length k in nums
 for example: nums = [1,2,3,7,4,1], k =3, output = 14 ,[3,4,7]
 
 '''
+
+def subarray_sum_fixed(input, window_size):
+    ans = window = input[0:window_size]
+    for right in range(window_size, len(input)):
+        left = right - window_size
+        window.remove(input[left])
+        window.append(input[right])
+        ans = max(ans, window)
+    return ans
+
